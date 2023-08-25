@@ -1,0 +1,46 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  height: 100%;
+}
+
+.navbar-logo {
+    line-height: normal;
+}
+.navbar-logo img {
+  width: 162px;
+  src: url("../../assets/logo.svg");
+  padding: 13px 0;
+}
+
+.menu-toggle {
+  display: none; /* By default, the menu toggle is hidden */
+}
+
+.desktop-menu.show {
+  display: block;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  line-height: 70px;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .desktop-menu {
+    display: none; /* Hide menu on smaller screens */
+  }
+
+  .menu-toggle {
+    display: inline-block; /* Show menu toggle button on smaller screens */
+  }
+}
