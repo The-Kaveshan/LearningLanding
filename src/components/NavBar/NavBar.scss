@@ -1,90 +1,90 @@
 .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  height: 100%;
 }
 
 .desktop-menu {
-    display: flex;
-    justify-content: flex-end;
-    overflow: visible;
-    white-space: nowrap;
-    flex: 1;
-    border-bottom: none;
-    
-    .ant-menu-item {
-        margin-right: 20px; 
-    }
+  display: flex;
+  justify-content: flex-end;
+  overflow: visible;
+  white-space: nowrap;
+  flex: 1;
+  border-bottom: none;
 
-    /* Ensure the last menu item doesn't have unnecessary margin on the right */
-    .ant-menu-item:last-child {
-        margin-right: 0;
-    }
+  .ant-menu-item {
+    margin-right: 20px;
+  }
+
+  /* Ensure the last menu item doesn't have unnecessary margin on the right */
+  .ant-menu-item:last-child {
+    margin-right: 0;
+  }
 }
 
 .navbar-logo {
-    line-height: normal;
+  line-height: normal;
 
-    img {
-        width: 162px;
-        padding: 13px 0;
-    }
+  img {
+    width: 162px;
+    padding: 13px 0;
+  }
 }
 
 .custom-drawer {
-    .ant-drawer-header {
-        padding: 0;
+  .ant-drawer-header {
+    padding: 0;
+  }
+
+  .ant-drawer-close {
+    left: unset;
+    right: 0;
+    font-size: 25px;
+  }
+
+  .ant-menu-submenu {
+    position: relative;
+
+    .ant-menu {
+      position: static;
+      box-shadow: none;
+      border: none;
+      width: 100%;
     }
 
-    .ant-drawer-close {
-        left: unset;
-        right: 0;
-        font-size: 25px;
+    .ant-menu-item {
+      padding-left: 20px;
+    }
+  }
+
+  .ant-menu-vertical .ant-menu-submenu-popup.ant-menu-popup {
+    display: none;
+  }
+
+  .ant-menu-submenu.ant-menu-submenu-open {
+    .ant-menu-sub {
+      display: block;
+      position: static;
+      border: 0;
+      box-shadow: none;
+      width: 100%;
     }
 
-    .ant-menu-submenu {
-        position: relative;
-
-        .ant-menu {
-            position: static;
-            box-shadow: none;
-            border: none;
-            width: 100%;
-        }
-
-        .ant-menu-item {
-            padding-left: 20px;
-        }
+    .ant-menu-item {
+      padding-left: 30px;
     }
-
-    .ant-menu-vertical .ant-menu-submenu-popup.ant-menu-popup {
-        display: none;
-    }
-
-    .ant-menu-submenu.ant-menu-submenu-open {
-        .ant-menu-sub {
-            display: block;
-            position: static;
-            border: 0;
-            box-shadow: none;
-            width: 100%;
-        }
-
-        .ant-menu-item {
-            padding-left: 30px;
-        }
-    }
+  }
 }
 
 .drawer-close-icon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 2;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
 }
 
 .mobile-menu {
-    border-inline-end: none !important;
+  border-inline-end: none !important;
 }
