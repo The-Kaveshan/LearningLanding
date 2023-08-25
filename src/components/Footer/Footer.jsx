@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import './Footer.css';
+import './Footer.scss';
 
 function FooterComponent() {
     return (

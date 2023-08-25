@@ -2,15 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Menu, Button, Drawer, Collapse } from "antd";
 
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
-import "./NavBar.css";
+import "./NavBar.scss";
 import Logo from "../../assets/logo.svg";
 
 function NavBar({ items }) {
-  const [visible, setVisible] = useState(false);
-  const [openKeys, setOpenKeys] = useState([]);
-  const [activeKey, setActiveKey] = useState([]);
+  const { SubMenu } = Menu;
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
+  const [visible, setVisible] = useState(false);
+  
   const showDrawer = () => {
     setVisible(true);
   };
@@ -18,7 +17,6 @@ function NavBar({ items }) {
   const onClose = () => {
     setVisible(false);
   };
-  const { SubMenu } = Menu;
 
   useEffect(() => {
     const handleResize = () => {
@@ -35,28 +33,12 @@ function NavBar({ items }) {
     };
   }, []);
 
-  const handleMenuClick = (e) => {
-    // If the clicked item has submenu, stop the Drawer from closing
-    if (e.keyPath.length > 1) {
-      e.domEvent.stopPropagation();
-    }
-  };
-
-  const handleSubMenuHover = (key, isHovering) => {
-    if (isHovering) {
-      setOpenKeys((prevKeys) => [...prevKeys, key]);
-    } else {
-      setOpenKeys((prevKeys) => prevKeys.filter((k) => k !== key));
-    }
-  };
-
   return (
     <div className="navbar-container">
       <div className="navbar-logo">
         <img src={Logo} alt="Logo" />
       </div>
       {isMobile ? (
-        // Mobile view components here (e.g., Drawer)
         <>
           <Drawer
             title={
@@ -67,7 +49,7 @@ function NavBar({ items }) {
             placement="right"
             closable={true}
             onClose={onClose}
-            visible={visible}
+            open={visible}
             width="100%"
             closeIcon={<CloseOutlined className="drawer-close-icon" />}
             className="custom-drawer"
@@ -104,7 +86,6 @@ function NavBar({ items }) {
           />
         </>
       ) : (
-        // Desktop view components here (e.g., regular Menu)
         <>
           <Menu mode="horizontal" className="desktop-menu">
             {items.map((item) => {
