@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
 import FooterComponent from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 
