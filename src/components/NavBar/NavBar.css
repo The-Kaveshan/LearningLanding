@@ -1,0 +1,88 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    height: 100%;
+}
+.desktop-menu {
+    display: flex;
+    justify-content: flex-end; /* This aligns the menu items to the right */
+    overflow: visible;
+    white-space: nowrap;
+    flex: 1;
+}
+
+.desktop-menu .ant-menu-item {
+    margin-right: 20px; 
+}
+
+/* Ensure the last menu item doesn't have unnecessary margin on the right */
+.desktop-menu .ant-menu-item:last-child {
+    margin-right: 0;
+}
+
+.navbar-logo {
+    line-height: normal;
+}
+.navbar-logo img {
+    width: 162px;
+    padding: 13px 0;
+}
+
+.custom-drawer .ant-drawer-header {
+    padding: 0;
+}
+.custom-drawer .ant-drawer-close {
+    left: unset;
+    right: 0;
+    font-size: 25px;
+}
+
+/* Ensure the submenus open in-line rather than as a pop-out */
+.custom-drawer .ant-menu-submenu {
+    position: relative;
+}
+
+.custom-drawer .ant-menu-submenu .ant-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+}
+
+/* Add some spacing to differentiate submenu items from their parent */
+.custom-drawer .ant-menu-submenu .ant-menu-item {
+    padding-left: 20px;
+}
+
+/* Override default pop-out behavior */
+.custom-drawer .ant-menu-vertical .ant-menu-submenu-popup.ant-menu-popup {
+    display: none;
+}
+
+/* Display submenu below the parent */
+.custom-drawer .ant-menu-submenu.ant-menu-submenu-open .ant-menu-sub {
+    display: block;
+    position: static;
+    border: 0;
+    box-shadow: none;
+    width: 100%;
+}
+
+/* Adjust submenu item appearance */
+.custom-drawer .ant-menu-submenu.ant-menu-submenu-open .ant-menu-item {
+    padding-left: 30px;
+}
+
+
+.drawer-close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.mobile-menu {
+    border-inline-end: none !important;
+}
