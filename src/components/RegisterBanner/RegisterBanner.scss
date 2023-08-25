@@ -1,0 +1,46 @@
+// RegisterBanner.scss
+
+.animated-banner {
+    position: fixed;
+    top: 70px; // Replace with your header's height.
+    left: 0;
+    right: 0;
+    background-color: #4caf50;
+    color: white;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-out;
+    z-index: 999;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 767px) { 
+    .animated-banner {
+        padding: 0;
+
+        button {
+            font-size: 12px; 
+        }
+
+        span { 
+            font-size: 12px;
+        }
+    }
+
+    .animated-banner .ant-row > .ant-col {
+        display: flex;
+        flex-direction: column;  // Stack items vertically on mobile
+        align-items: center;     // Center items horizontally
+        text-align: center;      // Center text
+    }
+}
