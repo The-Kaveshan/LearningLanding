@@ -34,9 +34,15 @@
 }
 
 .ant-menu-submenu {
+
+  .ant-menu.ant-menu-sub {
+  color: rgba(0, 0, 0, 0.55);
+  // color: red;
+  }
   .sub-menu {
-    background: #f2f2f2;
-    font-weight:500
+    // background: #f2f2f2;
+    font-weight:600;
+    color: rgba(0, 0, 0, 0.88)
   } 
 }
 .custom-drawer {

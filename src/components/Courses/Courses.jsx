@@ -1,35 +1,34 @@
-import React, { useState } from "react";
-import { Carousel, Card, Button, Badge } from "antd";
-import "./CourseSlider.scss";
-
+import React from "react";
+import { Card, Badge, Row, Col, Divider, Typography } from "antd";
+import "./Courses.scss";
 const courses = [
   {
     title: "Certified Full Stack Web & Software Engineer bootcamp",
     description:
       "Learn to create complex and powerful software, apps, and websites in our most advanced Immersive bootcamp.",
     length: "12 months part-time | 6 months full-time",
-    category: "Online Coding",
+    category: "Online",
   },
   {
     title: "Software Engineer bootcamp",
     description:
       "Go from newbie to software engineer in no time. Learn everything you need to create amazing computer programs and software.",
     length: "6 months part-time | 3 months full-time",
-    category: "Online Coding",
+    category: "Online",
   },
   {
     title: "Data Scientist bootcamp",
     description:
       "Learn to use classic machine learning models and popular data science tools to work with data to empower business, research, and technology.",
     length: "6 months part-time | 3 months full-time",
-    category: "Online Coding",
+    category: "Online",
   },
   {
     title: "Full Stack Web Developer bootcamp",
     description:
       "Master frontend & backend web development to build database-driven web apps using the powerful MERN stack.",
     length: "6 months part-time | 3 months full-time",
-    category: "Online Coding",
+    category: "Online",
   },
   {
     title:
@@ -60,79 +59,48 @@ const courses = [
     description:
       "Go from newbie to software engineer in no time. Learn everything you need to create amazing computer programs and software.",
     length: "3 months full-time",
-    category: "On-Site Courses",
+    category: "On-Site",
   },
 ];
 
-function CourseSlider() {
-  const carouselRef = React.useRef(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = courses.length;
+function Courses() {
+  const { Paragraph, Text } = Typography;
 
-  const handlePrev = () => {
-    carouselRef.current.prev();
-  };
-
-  const handleNext = () => {
-    carouselRef.current.next();
-  };
-
-  const handleAfterChange = (current) => {
-    setCurrentSlide(current);
-  };
-  const contentStyle = {
-    height: "160px",
-    color: "#fff",
-    lineHeight: "160px",
-    textAlign: "center",
-    background: "#364d79",
-  };
   return (
     <div className="course-slider">
       <div className="header">
-        <h3>Start learning</h3>
-        <h1>Find Your Perfect Course</h1>
+        <h3>Embark on Your Learning Journey</h3>
+        <h1>Discover Your Ideal Course</h1>
       </div>
-      <div className="carousel-container">
-        {currentSlide > 0 && (
-          <button className="carousel-control prev" onClick={handlePrev}>
-            ←
-          </button>
-        )}
-        <Carousel
-          ref={carouselRef}
-          infinite={false}
-          afterChange={handleAfterChange}
-          autoplay={false}
-          slidesToShow={4}
-          responsive={[{ breakpoint: 768, settings: { slidesToShow: 1 } }]}
-        >
-          {courses.map((course) => (
-            <div className="card-container">
-              <Badge.Ribbon text={course.category}>
-                <Card
-                  className="course-card"
-                  key={course.id}
-                  title={course.title}
-                >
-                  <p>{course.description}</p>
-                  <p>
-                    <strong>Duration:</strong> {course.length}
-                  </p>
-                  <Button type="primary">View More</Button>
+      <div>
+        <Row gutter={16}>
+          {courses.map((course, index) => (
+            <Col xs={24} sm={12} md={8} lg={6} key={index}>
+              <Badge.Ribbon
+                text={course.category}
+                color={
+                  course.category === "Online"
+                    ? "blue"
+                    : course.category === "University"
+                    ? "green"
+                    : course.category === "On-Site"
+                    ? "orange"
+                    : "gray"
+                }
+              >
+                <Card bordered={false}>
+                  <h4>{course.title}</h4>
+                  <Divider />
+                  <p className={"course-text"}>{course.description}</p>
+                  <p className={"duration"}>{course.length}</p>
                 </Card>
               </Badge.Ribbon>
-            </div>
+            </Col>
           ))}
-        </Carousel>
-        {currentSlide < totalSlides - 4 && (
-          <button className="carousel-control next" onClick={handleNext}>
-            →
-          </button>
-        )}
+        </Row>
       </div>
     </div>
   );
 }
 
-export default CourseSlider;
+export default Courses;

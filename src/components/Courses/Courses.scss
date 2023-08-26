@@ -1,0 +1,97 @@
+.course-slider {
+  text-align: center;
+  background-color: #f5f7f8;
+  padding: 20px;
+  color: rgba(0, 0, 0, 0.88);
+  .header {
+    h3 {
+      font-weight: normal;
+      // color: #777;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 30px;
+      // color: #333;
+    }
+  }
+
+  .ant-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    .ant-col {
+      display: flex;
+      padding: 10px; // Added for better appearance
+
+      .ant-badge {
+        flex: 1; // Makes sure each badge (with card inside) takes full height
+        display: flex;
+      }
+
+      .ant-card {
+        flex: 1; // Allows the card to grow and consume available height
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; // Distributes space between card content
+        // background: pink;
+        // height: 100vh;
+        .ant-card-body {
+          min-height: 100%;
+        }
+        .ant-ribbon {
+          margin-top: -7px;
+        }
+
+        h4 {
+          padding: 0;
+          height: 55px;
+          margin: 0;
+          display: flex;
+          align-items: center; /* vertical alignment */
+          justify-content: center; /* horizontal alignment */
+        }
+
+        .course-text {
+          min-height: 100px;
+          display: flex;
+          align-items: center; /* vertical alignment */
+          justify-content: center; /* horizontal alignment */
+          margin: 0;
+          color: rgba(0, 0, 0, 0.65)
+        }
+
+        .duration {
+          height: 20px;
+          margin: 10px 0 0 0 ;
+          display: flex;
+          align-items: center; /* vertical alignment */
+          justify-content: center; /* horizontal alignment */
+          color: rgba(0,0,0,.35);
+          text-transform: uppercase;
+          font-weight: 400;
+        }
+
+        .ant-divider {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .course-slider {
+    margin: 10px;
+
+    .header {
+      h1 {
+        font-size: 1.5em;
+      }
+    }
+
+    // .ant-card-body {
+    //   min-height: 100%;
+    // }
+  }
+}
