@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Badge, Row, Col, Divider, Typography } from "antd";
 import "./Courses.scss";
+import Header from "../Header/Header";
 const courses = [
   {
     title: "Certified Full Stack Web & Software Engineer bootcamp",
@@ -68,37 +69,35 @@ function Courses() {
 
   return (
     <div className="course-slider">
-      <div className="header">
-        <h3>Embark on Your Learning Journey</h3>
-        <h1>Discover Your Ideal Course</h1>
-      </div>
-      <div>
-        <Row gutter={16}>
-          {courses.map((course, index) => (
-            <Col xs={24} sm={12} md={8} lg={6} key={index}>
-              <Badge.Ribbon
-                text={course.category}
-                color={
-                  course.category === "Online"
-                    ? "blue"
-                    : course.category === "University"
-                    ? "green"
-                    : course.category === "On-Site"
-                    ? "orange"
-                    : "gray"
-                }
-              >
-                <Card bordered={false}>
-                  <h4>{course.title}</h4>
-                  <Divider />
-                  <p className={"course-text"}>{course.description}</p>
-                  <p className={"duration"}>{course.length}</p>
-                </Card>
-              </Badge.Ribbon>
-            </Col>
-          ))}
-        </Row>
-      </div>
+      <Header
+        title={"Discover Your Ideal Course"}
+        subtitle={"Embark on Your Learning Journey"}
+      />
+      <Row gutter={16}>
+        {courses.map((course, index) => (
+          <Col xs={24} sm={12} md={8} lg={6} key={index}>
+            <Badge.Ribbon
+              text={course.category}
+              color={
+                course.category === "Online"
+                  ? "blue"
+                  : course.category === "University"
+                  ? "green"
+                  : course.category === "On-Site"
+                  ? "orange"
+                  : "gray"
+              }
+            >
+              <Card bordered={false}>
+                <h4>{course.title}</h4>
+                <Divider />
+                <p className={"course-text"}>{course.description}</p>
+                <p className={"duration"}>{course.length}</p>
+              </Card>
+            </Badge.Ribbon>
+          </Col>
+        ))}
+      </Row>
     </div>
   );
 }

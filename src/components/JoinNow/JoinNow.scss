@@ -1,5 +1,11 @@
 .join-now-container {
-  background-color: #f5f5f5;
+  background: rgb(71, 23, 157);
+  background: linear-gradient(
+    90deg,
+    rgba(71, 23, 157, 1) 0%,
+    rgba(23, 149, 232, 1) 49%,
+    rgba(71, 23, 157, 1) 100%
+  );
   padding: 2rem;
   color: #333;
   .text-container {

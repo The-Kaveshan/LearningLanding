@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import { Card, Avatar, Rate, Typography } from "antd";
 import "./Review.scss";
+import Header from "../Header/Header";
 
 import Amy from "../../assets/images/reviews/Amy.jpg";
 import Simphiwe from "../../assets/images/reviews/Simphiwe.jpg";
@@ -9,7 +10,7 @@ import Evan from "../../assets/images/reviews/Evan.jpg";
 import Robin from "../../assets/images/reviews/Robin.jpg";
 
 const Review = () => {
-  const { Title , Text} = Typography;
+  const { Title, Text } = Typography;
   const reviews = [
     {
       id: 1,
@@ -44,7 +45,7 @@ const Review = () => {
       name: "Evan",
       image: Evan,
       rating: 4.5,
-      text: "The bootcamp was transformative for me. I started with almost zero knowledge in coding, and now I'm proud to say I'm working at a top tech company as a junior developer. The guidance, support, and real-world projects were beyond my expectations!"
+      text: "The bootcamp was transformative for me. I started with almost zero knowledge in coding, and now I'm proud to say I'm working at a top tech company as a junior developer. The guidance, support, and real-world projects were beyond my expectations!",
     },
   ];
 
@@ -58,29 +59,40 @@ const Review = () => {
         if (rect.top <= window.innerHeight && rect.bottom >= 0) {
           setIsVisible(true);
           // Remove event listener once the element is in view
-          window.removeEventListener('scroll', handleScroll);
+          window.removeEventListener("scroll", handleScroll);
         }
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-      <div className={`reviews-container ${isVisible ? 'fadeIn' : ''}`} ref={reviewRef}>
-      <div className="header">
-        <h2 >Inspiring Tales of Tomorrow's Visionaries</h2>
+    <>
+      <Header
+        title={"Inspiring Tales of Tomorrow's Visionaries"}
+        subtitle={""}
+      />
+      <div
+        className={`reviews-container ${isVisible ? "fadeIn" : ""}`}
+        ref={reviewRef}
+      >
+        {reviews.map((review) => (
+          <Card key={review.id} className="review-card">
+            <Avatar size={100} src={review.image} />
+            <Title level={3}>{review.name}</Title>
+            <Rate
+              allowHalf
+              value={review.rating}
+              disabled
+              className="ant-rate"
+            />
+            <Text>{review.text}</Text>
+          </Card>
+        ))}
       </div>
-      {reviews.map((review) => (
-        <Card key={review.id} className="review-card">
-          <Avatar size={100} src={review.image} />
-          <Title level={3}>{review.name}</Title>
-          <Rate allowHalf value={review.rating} disabled className="ant-rate"/>
-          <Text>{review.text}</Text>
-        </Card>
-      ))}
-    </div>
+    </>
   );
 };
 
