@@ -15,31 +15,31 @@ const { Header, Footer, Content } = Layout;
 
 function App() {
   return (
-    <div className="App">
-        <Space direction="vertical" style={{ width: "100%" }} size={[0, 48]}>
-          <Layout className="page-container">
-            <Header
-              className="headerStyle"
-              style={{
-                background: "#FFFFFF"
-              }}
-            >
-              <RegisterBanner />
-              <NavBar />
-            </Header>
-            <Content className="contentStyle">
-              <Courses />
-              {/* <Awards /> */}
-              <Facts />
-              <Review />
-              <Clients />
-              <JoinNow />
-            </Content>
-            <Footer style={{ padding: "0" }}>
-              <FooterComponent />
-            </Footer>
-          </Layout>
-        </Space>
+    <div>
+      <Space direction="vertical" style={{ width: "100%" }} size={[0, 48]}>
+        <Layout>
+          <Header
+            className="headerStyle"
+            style={{
+              background: "#FFFFFF",
+            }}
+          >
+            <RegisterBanner />
+            <NavBar />
+          </Header>
+          <Content className="contentStyle">
+            <Courses />
+            {/* <Awards /> */}
+            <Facts />
+            <Review />
+            <Clients className={'clients'}/>
+            <JoinNow />
+          </Content>
+          <Footer style={{ padding: "0" }}>
+            <FooterComponent />
+          </Footer>
+        </Layout>
+      </Space>
     </div>
   );
 }
