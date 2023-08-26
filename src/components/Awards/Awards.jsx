@@ -1,9 +1,9 @@
 import React from "react";
 import { Card, Row, Col, Rate, Avatar } from "antd";
 import "./Awards.scss";
-import Logo1 from "../../assets/awards/switchup.png";
-import Logo2 from "../../assets/awards/course-report.png";
-import Logo3 from "../../assets/awards/google.png";
+import Logo1 from "../../assets/images/awards/switchup.png";
+import Logo2 from "../../assets/images/awards/course-report.png";
+import Logo3 from "../../assets/images/awards/google.png";
 
 import { Typography } from "antd";
 

@@ -2,42 +2,47 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Card, Avatar, Rate, Typography } from "antd";
 import "./Review.scss";
 
+import Amy from "../../assets/images/reviews/Amy.jpg";
+import Simphiwe from "../../assets/images/reviews/Simphiwe.jpg";
+import Busisiwe from "../../assets/images/reviews/Busisiwe.jpg";
+import Evan from "../../assets/images/reviews/Evan.jpg";
+import Robin from "../../assets/images/reviews/Robin.jpg";
+
 const Review = () => {
   const { Title , Text} = Typography;
   const reviews = [
     {
       id: 1,
       name: "Amy",
-      image: "https://www.hyperiondev.com/static/images/video-slider/Amy.jpg",
+      image: Amy,
       rating: 5,
       text: "The experience was phenomenal! The instructors were knowledgeable, and the course structure was well-curated. Highly recommend!",
     },
     {
       id: 2,
       name: "Simphiwe",
-      image: "https://www.hyperiondev.com/static/images/video-slider/Simphiwe.jpg",
+      image: Simphiwe,
       rating: 4,
       text: "I learned so much in such a short time. The projects were challenging but very enlightening. Could use a bit more material on advanced topics.",
     },
     {
       id: 3,
       name: "Busisiwe",
-      image:
-        "https://www.hyperiondev.com/static/images/video-slider/Busisiwe.jpg",
+      image: Busisiwe,
       rating: 4.5,
       text: "A well-paced course with a good balance of theory and practical exercises. I feel ready to tackle real-world problems now.",
     },
     {
       id: 4,
       name: "Robin",
-      image: "https://www.hyperiondev.com/static/images/video-slider/Robin.jpg",
+      image: Robin,
       rating: 5,
       text: "Absolutely worth it! The support from mentors and the community is fantastic. Can’t wait for the next advanced course!",
     },
     {
       id: 5,
       name: "Evan",
-      image: "https://www.hyperiondev.com/static/images/video-slider/Evan.jpg",
+      image: Evan,
       rating: 4.5,
       text: "The bootcamp was transformative for me. I started with almost zero knowledge in coding, and now I'm proud to say I'm working at a top tech company as a junior developer. The guidance, support, and real-world projects were beyond my expectations!"
     },

@@ -9,6 +9,7 @@ import CourseSlider from "./components/CourseSlider/CourseSlider";
 import Review from "./components/Review/Review";
 import Awards from "./components/Awards/Awards";
 import Facts from "./components/Facts/Facts";
+import Clients from "./components/Clients/Clients";
 
 const { Header, Footer, Content } = Layout;
 
@@ -59,6 +60,7 @@ function App() {
             <CourseSlider />
             <Awards />
             <Facts />
+            <Clients />
             <Review />
           </Content>
           <Footer className="footerStyle">
