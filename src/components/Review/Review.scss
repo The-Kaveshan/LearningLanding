@@ -1,66 +1,53 @@
-.reviews-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; // Spacing between cards
-  justify-content: center; // Center cards for better alignment
-  text-align: center;
-  padding: 30px; // Add generous padding around the container
-  background-color: #f5f7f8;
+.review-card {
+  width: 100%;
+  max-width: 320px; // Adjust for preferred card width
+  margin: 10px auto; // Auto margin for horizontal centering
+  border-radius: 5px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); // Subtle shadow
+  transition: transform 0.3s ease, box-shadow 0.3s ease; // Animation for hover
 
-  .review-card {
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.12);
+  }
+
+  .ant-rate {
     width: 100%;
-    max-width: 320px; // Adjust for preferred card width
-    margin: 10px auto; // Auto margin for horizontal centering
-    border-radius: 5px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); // Subtle shadow
-    transition: transform 0.3s ease, box-shadow 0.3s ease; // Animation for hover
-
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+    margin-bottom: 1em;
+    .ant-rate-star-full > .ant-rate-star-first,
+    .ant-rate-star-half > .ant-rate-star-first {
+      color: #fadb14; // Customize star color if needed
     }
-
-    .ant-rate {
-      width: 100%;
-      flex-shrink: 0;
-      margin-bottom: 1em;
-      .ant-rate-star-full > .ant-rate-star-first,
-      .ant-rate-star-half > .ant-rate-star-first {
-        color: #fadb14; // Customize star color if needed
-      }
-    }
-  }
-
-  // Mobile responsiveness
-  @media (max-width: 768px) {
-    padding: 15px; // Reduce padding for smaller screens
-
-    .review-card {
-      max-width: 100%;
-      margin: 10px 0; // Add vertical margins
-    }
-  }
-
-  &.fadeIn {
-    animation: fadeInAnimation 2s ease-in-out forwards;
   }
 }
 
 // Mobile responsiveness
 @media (max-width: 768px) {
-  .reviews-container {
-    gap: 10px;
-    .review-card {
-      max-width: 100%;
-    }
+  // padding: 15px; // Reduce padding for smaller screens
+
+  .review-card {
+    max-width: 100%;
+    margin: 10px 0; // Add vertical margins
   }
 }
 
-@keyframes fadeInAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+// &.fadeIn {
+//   animation: fadeInAnimation 2s ease-in-out forwards;
+// }
+
+// Mobile responsiveness
+@media (max-width: 768px) {
+  .review-card {
+    max-width: 100%;
   }
 }
+
+// @keyframes fadeInAnimation {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }

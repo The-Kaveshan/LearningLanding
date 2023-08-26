@@ -26,13 +26,13 @@ body {
   border-image-slice: 1;
 }
 
-.contentStyle {
-  text-align: center;
-  min-height: 120;
-  list-style: 120px;
-  color: #fff;
-  background-color: "#108ee9";
-}
+// .contentStyle {
+//   text-align: center;
+//   min-height: 120;
+//   list-style: 120px;
+//   color: #fff;
+//   background-color: "#108ee9";
+// }
 
 .footerStyle {
   padding: 0;
@@ -40,19 +40,41 @@ body {
 
 .clients {
   padding: 2rem;
-  justify-content: center;
+  text-align: center;
   background: #FFFFFF;
 }
 
-.course {
-    text-align: center;
-    background-color: #f5f7f8;
-    padding: 20px;
-    color: rgba(0, 0, 0, 0.88);
+.facts {
+  padding: 2rem;
+  background-color: #FFFFFF;
+  text-align: center;
 }
+
+.course {
+  text-align: center;
+  background-color: #f5f7f8;
+  padding: 2rem;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.reviews {
+  text-align: center;
+  background-color: #f5f7f8;
+  padding: 2rem;
+
+  // display: flex;
+  // flex-wrap: wrap;
+  gap: 20px; // Spacing between cards
+  justify-content: center; // Center cards for better alignment
+}
+
 
 @media (max-width: 767px) {
   .course {
     margin: 10px;
+  }
+
+  .reviews {
+    gap: 10px;
   }
 }

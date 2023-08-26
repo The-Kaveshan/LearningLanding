@@ -9,7 +9,7 @@ import Busisiwe from "../../assets/images/reviews/Busisiwe.jpg";
 import Evan from "../../assets/images/reviews/Evan.jpg";
 import Robin from "../../assets/images/reviews/Robin.jpg";
 
-const Review = () => {
+const Review = ({className}) => {
   const { Title, Text } = Typography;
   const reviews = [
     {
@@ -50,34 +50,34 @@ const Review = () => {
   ];
 
   const [isVisible, setIsVisible] = useState(false);
-  const reviewRef = useRef(null);
+  // const reviewRef = useRef(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (reviewRef.current) {
-        const rect = reviewRef.current.getBoundingClientRect();
-        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-          setIsVisible(true);
-          // Remove event listener once the element is in view
-          window.removeEventListener("scroll", handleScroll);
-        }
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (reviewRef.current) {
+  //       const rect = reviewRef.current.getBoundingClientRect();
+  //       if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+  //         setIsVisible(true);
+  //         // Remove event listener once the element is in view
+  //         window.removeEventListener("scroll", handleScroll);
+  //       }
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
-    <>
+    <div className={className}>
       <Header
         title={"Inspiring Tales of Tomorrow's Visionaries"}
         subtitle={""}
       />
-      <div
+      {/* <div
         className={`reviews-container ${isVisible ? "fadeIn" : ""}`}
         ref={reviewRef}
-      >
+      > */}
         {reviews.map((review) => (
           <Card key={review.id} className="review-card">
             <Avatar size={100} src={review.image} />
@@ -92,7 +92,7 @@ const Review = () => {
           </Card>
         ))}
       </div>
-    </>
+    // </div>
   );
 };
 

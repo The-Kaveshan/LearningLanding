@@ -27,12 +27,11 @@ function App() {
             <RegisterBanner />
             <NavBar />
           </Header>
-          <Content className="contentStyle">
-            <Courses />
-            {/* <Awards /> */}
-            <Facts />
-            <Review />
-            <Clients className={'clients'}/>
+          <Content>
+            <Courses className={"course"} />
+            <Facts className={"facts"} />
+            <Review className={"reviews"} />
+            <Clients className={"clients"} />
             <JoinNow />
           </Content>
           <Footer style={{ padding: "0" }}>

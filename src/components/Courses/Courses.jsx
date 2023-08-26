@@ -1,7 +1,8 @@
 import React from "react";
 import { Card, Badge, Row, Col, Divider, Typography } from "antd";
-import "./Courses.scss";
 import Header from "../Header/Header";
+import "./Courses.scss";
+
 const courses = [
   {
     title: "Certified Full Stack Web & Software Engineer bootcamp",
@@ -64,11 +65,11 @@ const courses = [
   },
 ];
 
-function Courses() {
+function Courses({className}) {
   const { Paragraph, Text } = Typography;
 
   return (
-    <div className="course-slider">
+    <div className={className}>
       <Header
         title={"Discover Your Ideal Course"}
         subtitle={"Embark on Your Learning Journey"}

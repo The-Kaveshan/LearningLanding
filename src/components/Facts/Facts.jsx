@@ -4,11 +4,11 @@ import { Statistic, Row, Col, Typography } from "antd";
 import "./Facts.scss";
 import Header from "../Header/Header";
 
-const Facts = () => {
+const Facts = ({className}) => {
   const {Text} = Typography;
   const formatter = (value) => <CountUp end={value} separator="," />;
   return (
-    <div className="facts-container">
+    <div className={className}>
       <Header
         title={"An Experience That Transforms Lives"}
         subtitle={""}

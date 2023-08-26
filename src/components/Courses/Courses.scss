@@ -1,8 +1,4 @@
-.course-slider {
-  text-align: center;
-  background-color: #f5f7f8;
-  padding: 20px;
-  color: rgba(0, 0, 0, 0.88);
+.course {
 
   .ant-row {
     display: flex;
@@ -67,9 +63,3 @@
     }
   }
 }
-
-// @media (max-width: 767px) {
-//   .course-slider {
-//     margin: 10px;
-//   }
-// }
