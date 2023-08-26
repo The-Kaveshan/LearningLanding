@@ -65,7 +65,7 @@ function App() {
             <Review />
             <JoinNow />
           </Content>
-          <Footer className="footerStyle">
+          <Footer style={{padding:"0"}}>
             <FooterComponent />
           </Footer>
         </Layout>
