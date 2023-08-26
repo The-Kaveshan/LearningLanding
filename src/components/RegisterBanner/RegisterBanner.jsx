@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Button, Typography, Space, Row, Col } from "antd";
+import { Button, Typography, Space, Row, Col,Divider } from "antd";
 import {
-  CloseCircleOutlined,
+  CloseOutlined,
   InfoCircleOutlined,
   ArrowRightOutlined,
 } from "@ant-design/icons";
@@ -23,30 +23,29 @@ function RegisterBanner() {
           <Row>
             <Col xs={24} md={18}>
               <Space>
-                <InfoCircleOutlined />
-                <Text strong>Learn more about our bootcamps.</Text>
-                <Text>|</Text>
-                <Text strong>Join our next info session webinar!</Text>
+                <Text className="text">Participate in Our Upcoming Informational Webinar Session!</Text>
               </Space>
             </Col>
             <Col xs={24} md={6}>
               <Space align="center">
                 <Button
-                  type="primary"
                   size="large"
                   icon={<ArrowRightOutlined />}
+                  style={{ background: 'transparent', borderRadius: '0', border: '1.5px solid #FFFFFF', color: '#FFFFFF'}}
                 >
                   Register Now
                 </Button>
-                <Button
-                  icon={<CloseCircleOutlined />}
-                  type="text"
-                  onClick={() => setIsVisible(false)}
-                />
+                
               </Space>
             </Col>
           </Row>
         </Col>
+        <Button
+                  icon={<CloseOutlined />}
+                  type="text"
+                  style={{ background: 'transparent', borderRadius: '0', color: '#FFFFFF', right: 0, position: 'absolute', top: '0'}}
+                  onClick={() => setIsVisible(false)}
+                />
       </Row>
     </div>
   );

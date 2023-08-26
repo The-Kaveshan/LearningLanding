@@ -1,12 +1,12 @@
 html {
   scroll-behavior: smooth;
-  
+  overflow-x: hidden;
 }
-// body {
-//   font-family: 'Roboto', sans-serif, 'Oxygen',
-//   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-//   sans-serif !important;
-// }
+body {
+  font-family: 'Roboto', sans-serif, 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif !important;
+}
 .page-container {
   display: flex;
   flex-direction: column;
@@ -54,14 +54,19 @@ html {
 .headerStyle {
   text-align: "center";
   color: "#fff";
-  height: 70px;
-  padding-inline: 50px;
-  /* line-height: 70px; */
-  background: "red" !important;
+  height: auto;
+  padding-inline: 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  // width: 100%;
+  border-bottom: 1px solid transparent;
+  border-image:  linear-gradient(
+    90deg,
+    rgba(71, 23, 157, 1) 0%,
+    rgba(23, 149, 232, 1) 49%,
+    rgba(71, 23, 157, 1) 100%
+  );
+  border-image-slice: 1;
 }
 
 .contentStyle {

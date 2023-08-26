@@ -1,46 +1,60 @@
-// RegisterBanner.scss
-
 .animated-banner {
-    position: fixed;
-    top: 70px; // Replace with your header's height.
-    left: 0;
-    right: 0;
-    background-color: #4caf50;
-    color: white;
-    padding: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    animation: slideDown 0.5s ease-out;
-    z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgb(71, 23, 157);
+  background: linear-gradient(
+    90deg,
+    rgba(71, 23, 157, 1) 0%,
+    rgba(23, 149, 232, 1) 49%,
+    rgba(71, 23, 157, 1) 100%
+  );
+  color: white;
+  padding: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.5s ease-out;
+  z-index: 999;
+  width: 100%;
+
+  .text {
+    color: #FFFFFF;
+    font-size: 1.5em;
+  }
 }
 
 @keyframes slideDown {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0.5;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(-100%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-@media (max-width: 767px) { 
-    .animated-banner {
-        padding: 0;
+@media (max-width: 767px) {
+  .animated-banner {
+    padding: 0;
 
-        button {
-            font-size: 12px; 
-        }
-
-        span { 
-            font-size: 12px;
-        }
+    button {
+      font-size: 12px;
     }
 
-    .animated-banner .ant-row > .ant-col {
-        display: flex;
-        flex-direction: column;  // Stack items vertically on mobile
-        align-items: center;     // Center items horizontally
-        text-align: center;      // Center text
+    span {
+      font-size: 12px;
     }
+
+    .text {
+        font-size: 1em;
+      }
+  }
+
+  .animated-banner .ant-row > .ant-col {
+    display: flex;
+    flex-direction: column; // Stack items vertically on mobile
+    align-items: center; // Center items horizontally
+    text-align: center; // Center text
+  }
 }

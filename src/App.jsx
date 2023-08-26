@@ -21,19 +21,18 @@ function App() {
             <Header
               className="headerStyle"
               style={{
-                background: "#FFFFFF",
-                borderBottom: "1px solid #d9d9d9",
+                background: "#FFFFFF"
               }}
             >
-              <NavBar />
               <RegisterBanner />
+              <NavBar />
             </Header>
             <Content className="contentStyle">
               <Courses />
               {/* <Awards /> */}
               <Facts />
-              <Clients />
               <Review />
+              <Clients />
               <JoinNow />
             </Content>
             <Footer style={{ padding: "0" }}>
