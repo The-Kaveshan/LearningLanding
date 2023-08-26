@@ -10,6 +10,7 @@ import Review from "./components/Review/Review";
 import Awards from "./components/Awards/Awards";
 import Facts from "./components/Facts/Facts";
 import Clients from "./components/Clients/Clients";
+import JoinNow from "./components/JoinNow/JoinNow";
 
 const { Header, Footer, Content } = Layout;
 
@@ -58,10 +59,11 @@ function App() {
           </Header>
           <Content className="contentStyle">
             <CourseSlider />
-            <Awards />
+            {/* <Awards /> */}
             <Facts />
             <Clients />
             <Review />
+            <JoinNow />
           </Content>
           <Footer className="footerStyle">
             <FooterComponent />

@@ -30,12 +30,17 @@ const Awards = () => {
 
   return (
     <div className="awards-container">
-      <Row gutter={16}>
+      <Row gutter={16} justify="center" align="middle">
         {awardsData.map((award, index) => (
-          <Col xs={24} sm={12} md={8} lg={6} key={index}>
-            <Avatar src={<img src={award.img} alt={award.title} />} size={64} />
-            <Title level={5}>{award.title}</Title>
-            <Rate disabled allowHalf defaultValue={award.rating} />
+          <Col xs={24} sm={12} md={8} lg={6} key={index} className="award-col">
+            <div className="award-content">
+              <Avatar
+                src={<img src={award.img} alt={award.title} />}
+                size={64}
+              />
+              <Title level={5}>{award.title}</Title>
+              <Rate disabled allowHalf defaultValue={award.rating} />
+            </div>
           </Col>
         ))}
       </Row>

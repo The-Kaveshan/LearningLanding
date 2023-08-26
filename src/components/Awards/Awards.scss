@@ -2,7 +2,19 @@
   padding: 30px;
   background-color: #f7f7f7;
   text-align: center;
-  
+  .award-col {
+    display: flex;
+    justify-content: center;
+
+    .award-content {
+      text-align: center;
+
+      .ant-avatar {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
   .ant-row {
     margin: 0 -10px;
 
