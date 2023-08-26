@@ -7,6 +7,7 @@ import VideoBanner from "./components/VideoBanner/VideoBanner";
 import { Layout, Space } from "antd";
 import CourseSlider from "./components/CourseSlider/CourseSlider";
 import Review from "./components/Review/Review";
+import Awards from "./components/Awards/Awards";
 import Facts from "./components/Facts/Facts";
 
 const { Header, Footer, Content } = Layout;
@@ -56,6 +57,7 @@ function App() {
           </Header>
           <Content className="contentStyle">
             <CourseSlider />
+            <Awards />
             <Facts />
             <Review />
           </Content>
