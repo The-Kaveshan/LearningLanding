@@ -1,15 +1,49 @@
 import React, { useState, useEffect } from "react";
-import { Menu, Button, Drawer, Collapse } from "antd";
+import { Menu, Button, Drawer } from "antd";
 
-import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
+import { MenuOutlined, CloseOutlined, LoginOutlined } from "@ant-design/icons";
 import "./NavBar.scss";
 import Logo from "../../assets/logo.svg";
 
-function NavBar({ items }) {
+function NavBar() {
+  const items = [
+    {
+      key: "1",
+      title: "Courses",
+      route: "/",
+      children: [
+        { key: "1-1", title: "View Immersive Learning", route: "/", subMenu: true },
+        {
+          key: "1-1-1",
+          title: "Full Stack Web & Software Engineer Bootcamp",
+          route: "/",
+        },
+        { key: "1-2", title: "View On-Site Bootcamps", route: "/", subMenu: true },
+        { key: "1-2-1", title: "Software Engineer", route: "/" },
+        { key: "1-3", title: "View Online Bootcamps", route: "/", subMenu: true },
+        { key: "1-3-1", title: "Web Developer", route: "/" },
+        { key: "1-3-2", title: "Software Engineer", route: "/" },
+        { key: "1-3-3", title: "Data Science", route: "/" },
+        {
+          key: "1-4",
+          title: "Stellenbosch University in Partnership with HyperionDev",
+          route: "/",
+          subMenu: true
+        },
+        { key: "1-4-1", title: "Web Developer", route: "/" },
+        { key: "1-4-2", title: "Software Engineer", route: "/" },
+        { key: "1-4-3", title: "Data Science", route: "/" },
+      ],
+    },
+    { key: "2", title: "Pricing", route: "/" },
+    { key: "3", title: "Our Method", route: "/" },
+    { key: "4", title: "For Employers", route: "/" },
+    { key: "5", title: "Contact Us", route: "/" },
+  ];
   const { SubMenu } = Menu;
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [visible, setVisible] = useState(false);
-  
+
   const showDrawer = () => {
     setVisible(true);
   };
@@ -54,14 +88,18 @@ function NavBar({ items }) {
             closeIcon={<CloseOutlined className="drawer-close-icon" />}
             className="custom-drawer"
           >
-            <Menu className={'mobile-menu'} mode="inline" onClick={(e) => e.domEvent.stopPropagation()}>
+            <Menu
+              className={"mobile-menu"}
+              mode="inline"
+              onClick={(e) => e.domEvent.stopPropagation()}
+            >
               {items.map((item) => {
                 // For items with children, use a SubMenu
                 if (item.children) {
                   return (
                     <Menu.SubMenu title={item.title} key={item.key}>
                       {item.children.map((subItem) => (
-                        <Menu.Item key={subItem.key}>
+                        <Menu.Item key={subItem.key} className={ subItem.subMenu ? 'sub-menu' : ''}>
                           <a href={subItem.route}>{subItem.title}</a>
                         </Menu.Item>
                       ))}
@@ -76,6 +114,10 @@ function NavBar({ items }) {
                   </Menu.Item>
                 );
               })}
+              <Menu.Item key={"login"}>
+                <LoginOutlined style={{marginRight: '5px'}}/>
+                <a href={"/"}>Login</a>
+              </Menu.Item>
             </Menu>
           </Drawer>
           <Button
@@ -93,7 +135,7 @@ function NavBar({ items }) {
                 return (
                   <SubMenu key={item.key} title={item.title}>
                     {item.children.map((subItem) => (
-                      <Menu.Item key={subItem.key}>
+                      <Menu.Item key={subItem.key} className={ subItem.subMenu ? 'sub-menu' : ''}>
                         <a href={subItem.route}>{subItem.title}</a>
                       </Menu.Item>
                     ))}
@@ -107,6 +149,7 @@ function NavBar({ items }) {
               );
             })}
           </Menu>
+          <Button style={{ borderRadius: 0}} icon={<LoginOutlined />}>Login</Button>
         </>
       )}
     </div>

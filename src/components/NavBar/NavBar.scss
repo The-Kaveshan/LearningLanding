@@ -15,12 +15,17 @@
   border-bottom: none;
 
   .ant-menu-item {
-    margin-right: 20px;
+    margin-right: 20px;   
   }
 
   /* Ensure the last menu item doesn't have unnecessary margin on the right */
   .ant-menu-item:last-child {
     margin-right: 0;
+  }
+
+  .sub-menu {
+    background: pink;
+    color: red;
   }
 }
 
@@ -33,6 +38,13 @@
   }
 }
 
+.ant-menu-submenu {
+  // background: blue;
+  .sub-menu {
+    background: #E6E6E6;
+    // color: red;
+  } 
+}
 .custom-drawer {
   .ant-drawer-header {
     padding: 0;
