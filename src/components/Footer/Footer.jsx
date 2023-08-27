@@ -10,49 +10,49 @@ import {
 import IconLogo from "../../assets/images/Icon_Logo.svg";
 import AccreditationLogo from "../../assets/images/mict-seta-logo.png";
 
-function Footer({className}) {
+function Footer({ className }) {
   return (
-    <div className={className}>
+    <footer className={className}>
       <Row gutter={[16, 16]}>
         <Col span={6}>
           <h3>Company</h3>
           <ul>
-            <li>Join our team</li>
-            <li>Privacy</li>
-            <li>Terms</li>
-            <li>About Us</li>
-            <li>FAQ</li>
-            <li>Contact Us</li>
+            <li><a href="#join">Join our team</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#terms">Terms</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact Us</a></li>
           </ul>
         </Col>
-
+        
         <Col span={6}>
           <h3>Employers</h3>
           <ul>
-            <li>Bootcamps</li>
-            <li>Upskill your employees</li>
-            <li>Success Stories</li>
+            <li><a href="#bootcamps">Bootcamps</a></li>
+            <li><a href="#upskill">Upskill your employees</a></li>
+            <li><a href="#success">Success Stories</a></li>
           </ul>
         </Col>
 
         <Col span={6}>
           <h3>Students</h3>
           <ul>
-            <li>#CodeDidThis</li>
-            <li>Coding Careers</li>
-            <li>Scholarships</li>
-            <li>Get a student loan</li>
-            <li>Resources</li>
+            <li><a href="#codedidthis">#CodeDidThis</a></li>
+            <li><a href="#careers">Coding Careers</a></li>
+            <li><a href="#scholarships">Scholarships</a></li>
+            <li><a href="#studentloan">Get a student loan</a></li>
+            <li><a href="#resources">Resources</a></li>
           </ul>
         </Col>
 
         <Col span={6}>
           <h3>Popular Topics</h3>
           <ul>
-            <li>Software Development</li>
-            <li>Web Development</li>
-            <li>Programming Information</li>
-            <li>Carbon Reduction Plan</li>
+            <li><a href="#software">Software Development</a></li>
+            <li><a href="#web">Web Development</a></li>
+            <li><a href="#programming">Programming Information</a></li>
+            <li><a href="#carbon">Carbon Reduction Plan</a></li>
           </ul>
         </Col>
       </Row>
@@ -60,10 +60,10 @@ function Footer({className}) {
       <div className="social-section">
         <div className="logos">
           <div className="logo logo-left">
-            <img src={IconLogo} alt="First Logo" />
+            <img src={IconLogo} alt="Company Logo" />
           </div>
           <div className="logo logo-right">
-            <img src={AccreditationLogo} alt="Second Logo" />
+            <img src={AccreditationLogo} alt="Accreditation Logo MICT SETA" />
           </div>
         </div>
         <p>
@@ -71,19 +71,28 @@ function Footer({className}) {
           <br />
           Accreditation Number: ACC/2017/05/0005
         </p>
-        <span >Follow us on </span>
+        <span>Follow us on </span>
         <div className="social-links">
+          <a href="https://www.facebook.com/hyperiondev" target="_blank" rel="noreferrer" aria-label="Facebook">
             <FacebookOutlined />
+          </a>
+          <a href="https://twitter.com/HypDev" target="_blank" rel="noreferrer" aria-label="Twitter">
             <TwitterOutlined />
+          </a>
+          <a href="https://www.instagram.com/hyperiondev/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram">
             <InstagramOutlined />
+          </a>
+          <a href="https://www.linkedin.com/school/hyperion-development-south-africa/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
             <LinkedinOutlined />
+          </a>
         </div>
       </div>
 
       <div className="copyright">
-        &copy; 2023 Developed By Kaveshan Kistan for HyperionDev. All rights reserved.
+        &copy; 2023 Developed By Kaveshan Kistan for HyperionDev. All rights
+        reserved.
       </div>
-    </div>
+    </footer>
   );
 }
 
