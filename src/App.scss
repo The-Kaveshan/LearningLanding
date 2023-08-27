@@ -26,10 +26,6 @@ body {
   border-image-slice: 1;
 }
 
-.footerStyle {
-  padding: 0;
-}
-
 .clients {
   padding: 2rem;
   text-align: center;
@@ -66,6 +62,14 @@ body {
     rgba(71, 23, 157, 1) 100%
   );
   padding: 2rem;
+}
+
+.footer {
+  width: 100%;  // Making sure it spans the full width
+    background-color: #333;
+    padding: 2rem 0; // Adding vertical padding for better design
+  color: #FFFFFF;
+  text-align: center;
 }
 
 @media (max-width: 767px) {

@@ -1,5 +1,5 @@
 import "./App.scss";
-import FooterComponent from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 import RegisterBanner from "./components/RegisterBanner/RegisterBanner";
 import VideoBanner from "./components/VideoBanner/VideoBanner";
@@ -9,7 +9,7 @@ import Review from "./components/Review/Review";
 import Facts from "./components/Facts/Facts";
 import Clients from "./components/Clients/Clients";
 import JoinNow from "./components/JoinNow/JoinNow";
-const { Header, Footer, Content } = Layout;
+const { Header, Content } = Layout;
 
 function App() {
   return (
@@ -32,9 +32,7 @@ function App() {
             <Clients className={"clients"} />
             <JoinNow className={"join-now"} />
           </Content>
-          <Footer style={{ padding: "0" }}>
-            <FooterComponent />
-          </Footer>
+          <Footer className={'footer'}/>
         </Layout>
       </Space>
     </div>

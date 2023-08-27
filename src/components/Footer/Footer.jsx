@@ -10,9 +10,9 @@ import {
 import IconLogo from "../../assets/Icon_Logo.svg";
 import AccreditationLogo from "../../assets/mict-seta-logo.png";
 
-function FooterComponent() {
+function Footer({className}) {
   return (
-    <div className="footer-container">
+    <div className={className}>
       <Row gutter={[16, 16]}>
         <Col span={6}>
           <h3>Company</h3>
@@ -71,20 +71,12 @@ function FooterComponent() {
           <br />
           Accreditation Number: ACC/2017/05/0005
         </p>
-        <span>Follow us: </span>
+        <span >Follow us on </span>
         <div className="social-links">
-          <a href="www.google.com">
             <FacebookOutlined />
-          </a>
-          <a href="www.google.com">
             <TwitterOutlined />
-          </a>
-          <a href="www.google.com">
             <InstagramOutlined />
-          </a>
-          <a href="www.google.com">
             <LinkedinOutlined />
-          </a>
         </div>
       </div>
 
@@ -95,4 +87,4 @@ function FooterComponent() {
   );
 }
 
-export default FooterComponent;
+export default Footer;

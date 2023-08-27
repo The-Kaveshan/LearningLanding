@@ -1,88 +1,85 @@
-.footer-container {
-    width: 100%;  // Making sure it spans the full width
-    background-color: #333;
-    padding: 2rem 0; // Adding vertical padding for better design
-    
-    h3 {
-        color: white;
+.footer {
+  h3 {
+    color: rgba(255, 255, 255, 1) !important;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    color: rgba(255, 255, 255, 0.5);
+
+    li {
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+      }
     }
+  }
 
-    ul {
-        list-style-type: none;  // Removes bullets
-        padding-left: 0;  // Removes default padding
-        color: rgba(255, 255, 255, 0.7);
-        
-        li {
-            margin-bottom: 0.5rem;
+  .social-section {
+    margin-top: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    .logos {
+      display: flex;
+      justify-content: center; // Center logos horizontally
+      align-items: center; // Center logos vertically
+      margin: 0 auto;
+      gap: 20px; // Optional: space between logos
 
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    .social-section {
-        margin-top: 2rem;
+      .logo {
         text-align: center;
-        
-        .logos {
-            display: flex;
-            justify-content: center; // Center logos horizontally
-            align-items: center;     // Center logos vertically
-            margin: 0 auto;
-            gap: 20px;  // Optional: space between logos
 
-            .logo {
-                text-align: center;
-
-                img {
-                    height: 50px;
-                    width: auto;
-                    max-width: 100%;
-                    display: block;
-                    margin: 0 auto;
-                }
-
-                &.logo-right {
-                    // styles specific to the right logo, for example:
-                    p {
-                        margin-top: 5px;
-                        font-size: 14px;
-                    }
-                }
-            }
+        img {
+          height: 50px;
+          width: auto;
+          max-width: 100%;
+          display: block;
+          margin: 0 auto;
         }
 
-        .social-links {
-            a {
-                margin: 0 1rem;
-                color: white;
-
-                &:hover {
-                    color: #ddd;
-                }
-            }
+        &.logo-right {
+          p {
+            margin-top: 5px;
+            font-size: 14px;
+          }
         }
+      }
     }
+    span {
+      color: white;
+    }
+    .social-links {
+      .anticon {
+        margin: 10px 15px;
+        font-size: 25px;
+        color: rgba(255, 255, 255, 1);
+        &:hover {
+          cursor: pointer;
+          color: rgba(23, 149, 232, 1);
+        }
+      }
+    }
+  }
 
-    .copyright {
-        margin-top: 2rem;
-        text-align: center;
-        color: rgba(255, 255, 255, 0.7);
-    }
+  .copyright {
+    margin-top: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+  }
 }
-
 // Mobile responsiveness
 @media (max-width: 768px) {
-    .footer-container {
-        .social-section {
-            .logos {
-                flex-direction: column;
-                
-                .logo-left, .logo-right {
-                    width: 100%;
-                }
-            }
-        }
+  .social-section {
+    .logos {
+      flex-direction: column;
+
+      .logo-left,
+      .logo-right {
+        width: 100%;
+      }
     }
+  }
 }
