@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.scss";
 import FooterComponent from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
@@ -7,7 +6,6 @@ import VideoBanner from "./components/VideoBanner/VideoBanner";
 import { ConfigProvider, Layout, Space } from "antd";
 import Courses from "./components/Courses/Courses";
 import Review from "./components/Review/Review";
-import Awards from "./components/Awards/Awards";
 import Facts from "./components/Facts/Facts";
 import Clients from "./components/Clients/Clients";
 import JoinNow from "./components/JoinNow/JoinNow";
@@ -32,7 +30,7 @@ function App() {
             <Facts className={"facts"} />
             <Review className={"reviews"} />
             <Clients className={"clients"} />
-            <JoinNow />
+            <JoinNow className={"join-now"} />
           </Content>
           <Footer style={{ padding: "0" }}>
             <FooterComponent />

@@ -26,14 +26,6 @@ body {
   border-image-slice: 1;
 }
 
-// .contentStyle {
-//   text-align: center;
-//   min-height: 120;
-//   list-style: 120px;
-//   color: #fff;
-//   background-color: "#108ee9";
-// }
-
 .footerStyle {
   padding: 0;
 }
@@ -61,13 +53,20 @@ body {
   text-align: center;
   background-color: #f5f7f8;
   padding: 2rem;
-
-  // display: flex;
-  // flex-wrap: wrap;
   gap: 20px; // Spacing between cards
   justify-content: center; // Center cards for better alignment
 }
 
+.join-now {
+  background: rgb(71, 23, 157);
+  background: linear-gradient(
+    90deg,
+    rgba(71, 23, 157, 1) 0%,
+    rgba(23, 149, 232, 1) 49%,
+    rgba(71, 23, 157, 1) 100%
+  );
+  padding: 2rem;
+}
 
 @media (max-width: 767px) {
   .course {

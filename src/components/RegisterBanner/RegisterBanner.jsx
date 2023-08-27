@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Button, Typography, Space, Row, Col } from "antd";
-import {
-  CloseOutlined,
-  ArrowRightOutlined,
-} from "@ant-design/icons";
+import { CloseOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import "./RegisterBanner.scss";
 
 const { Text } = Typography;
@@ -22,7 +19,9 @@ function RegisterBanner() {
           <Row>
             <Col xs={24} md={18}>
               <Space>
-                <Text className="text">Participate in Our Upcoming Informational Webinar Session!</Text>
+                <Text className="text">
+                  Participate in Our Upcoming Informational Webinar Session!
+                </Text>
               </Space>
             </Col>
             <Col xs={24} md={6}>
@@ -30,21 +29,32 @@ function RegisterBanner() {
                 <Button
                   size="large"
                   icon={<ArrowRightOutlined />}
-                  style={{ background: 'transparent', borderRadius: '0', border: '1.5px solid #FFFFFF', color: '#FFFFFF'}}
+                  style={{
+                    background: "transparent",
+                    borderRadius: "0",
+                    border: "1.5px solid #FFFFFF",
+                    color: "#FFFFFF",
+                  }}
                 >
                   Register Now
                 </Button>
-                
               </Space>
             </Col>
           </Row>
         </Col>
         <Button
-                  icon={<CloseOutlined />}
-                  type="text"
-                  style={{ background: 'transparent', borderRadius: '0', color: '#FFFFFF', right: 0, position: 'absolute', top: '0'}}
-                  onClick={() => setIsVisible(false)}
-                />
+          icon={<CloseOutlined />}
+          type="text"
+          style={{
+            background: "transparent",
+            borderRadius: "0",
+            color: "#FFFFFF",
+            right: 0,
+            position: "absolute",
+            top: "0",
+          }}
+          onClick={() => setIsVisible(false)}
+        />
       </Row>
     </div>
   );
