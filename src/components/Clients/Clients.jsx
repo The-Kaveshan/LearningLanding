@@ -6,7 +6,7 @@ import Header from "../Header/Header";
 
 const Clients = ({ className }) => {
   return (
-    <div className={className} role="complementary">
+    <div className={className} role="complementary" aria-label="Clients">
       <Header
         title={"Behold a Few Among the Many Companies Embracing Our Alumni."}
         subtitle={"Our Alumni Thrive in Top Global Tech Enterprises"}
