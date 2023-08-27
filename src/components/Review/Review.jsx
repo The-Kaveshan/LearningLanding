@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Avatar, Typography, Carousel } from "antd";
+import { Card, Avatar, Carousel } from "antd";
 import "./Review.scss";
 import Header from "../Header/Header";
 import { StarFilled } from "@ant-design/icons";
@@ -11,7 +11,6 @@ import Evan from "../../assets/images/reviews/Evan.jpg";
 import Robin from "../../assets/images/reviews/Robin.jpg";
 
 const Review = ({ className }) => {
-  const { Text } = Typography;
   const reviews = [
     {
       id: 1,

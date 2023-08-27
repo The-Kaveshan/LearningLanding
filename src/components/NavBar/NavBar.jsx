@@ -11,7 +11,7 @@ function NavBar() {
       key: "1",
       title: "Courses",
       route: "/",
-      children: [
+      items: [
         { key: "1-1", title: "View Immersive Learning", route: "/", subMenu: true },
         {
           key: "1-1-1",
@@ -95,10 +95,10 @@ function NavBar() {
             >
               {items.map((item) => {
                 // For items with children, use a SubMenu
-                if (item.children) {
+                if (item.items) {
                   return (
                     <Menu.SubMenu title={item.title} key={item.key}>
-                      {item.children.map((subItem) => (
+                      {item.items.map((subItem) => (
                         <Menu.Item key={subItem.key} className={ subItem.subMenu ? 'sub-menu' : ''}>
                           <a href={subItem.route}>{subItem.title}</a>
                         </Menu.Item>
@@ -131,10 +131,10 @@ function NavBar() {
         <>
           <Menu mode="horizontal" className="desktop-menu" role="navigation">
             {items.map((item) => {
-              if (item.children) {
+              if (item.items) {
                 return (
                   <SubMenu key={item.key} title={item.title}>
-                    {item.children.map((subItem) => (
+                    {item.items.map((subItem) => (
                       <Menu.Item key={subItem.key} className={ subItem.subMenu ? 'sub-menu' : ''}>
                         <a href={subItem.route}>{subItem.title}</a>
                       </Menu.Item>

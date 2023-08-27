@@ -68,7 +68,7 @@ const JoinNow = ({ className }) => {
                 sm={24}
                 md={24}
                 lg={3}
-                key={index}
+                key={`awards-1-${index}`}
                 className="award-col"
               >
                 <Avatar
@@ -81,7 +81,7 @@ const JoinNow = ({ className }) => {
                 sm={24}
                 md={24}
                 lg={21}
-                key={index}
+                key={`awards-2-${index}`}
                 className="award-col"
               >
                 <Text>{award.title}</Text>

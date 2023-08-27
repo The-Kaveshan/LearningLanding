@@ -3,7 +3,7 @@ import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 import RegisterBanner from "./components/RegisterBanner/RegisterBanner";
 import VideoBanner from "./components/VideoBanner/VideoBanner";
-import { ConfigProvider, Layout, Space } from "antd";
+import { Layout, Space } from "antd";
 import Courses from "./components/Courses/Courses";
 import Review from "./components/Review/Review";
 import Facts from "./components/Facts/Facts";

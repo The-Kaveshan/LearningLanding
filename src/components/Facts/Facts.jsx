@@ -47,7 +47,7 @@ const Facts = ({ className }) => {
             xs={24}
             sm={12}
             md={6}
-            key={index}
+            key={`facts-${index}`}
             role="group"
             aria-label={fact.title}
           >
