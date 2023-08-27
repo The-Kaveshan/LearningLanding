@@ -50,10 +50,11 @@ const Review = ({ className }) => {
     },
   ];
   return (
-    <div className={className}>
+    <div className={className} role="region" aria-label="User reviews section">
       <Header
-        title={"Inspiring Tales of Tomorrow's Visionaries"}
-        subtitle={""}
+        title="Inspiring Tales of Tomorrow's Visionaries"
+        subtitle=""
+        role="heading" aria-level="1"
       />
       <div className="carousel-container">
         <Carousel
@@ -66,14 +67,15 @@ const Review = ({ className }) => {
             { breakpoint: 768, settings: { slidesToShow: 1 } },
             { breakpoint: 992, settings: { slidesToShow: 4 } },
           ]}
+          aria-live="polite"
         >
           {reviews.map((review) => (
             <div className="slide" key={review.id}>
-              <Card className="review-card">
-                <Text className="review-text">{`"${review.text}"`}</Text>
-                <Avatar size={100} src={review.image} />
-                <h4>{review.name}</h4>
-                <div class="star-cont">
+              <Card className="review-card" tabIndex="0">
+                <blockquote className="review-text" tabIndex="0">{`"${review.text}"`}</blockquote>
+                <Avatar size={100} src={review.image} alt={`Image of ${review.name}`} />
+                <h4 tabIndex="0">{review.name}</h4>
+                <div className="star-cont" tabIndex="0" aria-label={`Rating: ${review.rating} stars`}>
                   <StarFilled />
                   {review.rating}
                 </div>
