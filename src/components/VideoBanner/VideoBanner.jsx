@@ -1,35 +1,47 @@
-import React, { useRef, useState } from 'react';
-import './VideoBanner.scss';
-
+import React, { useRef, useState } from "react";
+import "./VideoBanner.scss";
+import Video from "../../assets/videos/hyperion.mp4";
 function VideoBanner() {
-    const [isPlaying, setIsPlaying] = useState(false);
-    const ytPlayerRef = useRef(null);
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
 
-    const toggleVideo = () => {
-        if (isPlaying) {
-            ytPlayerRef.current.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-        } else {
-            ytPlayerRef.current.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-        }
-        setIsPlaying(!isPlaying);
+  const togglePlayPause = () => {
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    } else {
+      videoRef.current.pause();
+      setIsPlaying(false);
     }
+  };
 
-    return (
-        <div className="video-banner">
-            <iframe 
-                ref={ytPlayerRef}
-                src="https://www.youtube.com/embed/WAvg3wubkDo?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&enablejsapi=1" 
-                frameborder="0" 
-                allow="autoplay; encrypted-media" 
-                allowfullscreen 
-                title="Video"
-            ></iframe>
-            <div className="banner-controls">
-                <button onClick={toggleVideo}>{isPlaying ? 'Stop Video' : 'Start Video'}</button>
-                <button>Begin Trial</button>
-            </div>
-        </div>
-    );
+  const toggleMute = () => {
+    videoRef.current.muted = !videoRef.current.muted;
+    setIsMuted(!isMuted);
+  };
+
+  const stopVideo = () => {
+    videoRef.current.pause();
+    videoRef.current.currentTime = 0;
+    setIsPlaying(false);
+  };
+
+  return (
+    <div className="video-banner">
+      <video ref={videoRef} autoPlay loop muted={isMuted}>
+        <source src={Video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="video-controls">
+        <button onClick={togglePlayPause}>
+          {isPlaying ? "Pause" : "Play"}
+        </button>
+        <button onClick={toggleMute}>{isMuted ? "Unmute" : "Mute"}</button>
+        <button onClick={stopVideo}>Stop</button>
+      </div>
+    </div>
+  );
 }
 
 export default VideoBanner;

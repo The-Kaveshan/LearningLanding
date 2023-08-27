@@ -27,6 +27,7 @@ function App() {
           </Header>
           <Content>
             <Courses className={"course"} />
+            <VideoBanner />
             <Facts className={"facts"} />
             <Review className={"reviews"} />
             <Clients className={"clients"} />
