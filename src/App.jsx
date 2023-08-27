@@ -29,7 +29,7 @@ function App() {
           <Content>
             <Courses className={"course"} />
             <VideoBanner />
-            <Features />
+            <Features className={"features"} />
             <Facts className={"facts"} />
             <Review className={"reviews"} />
             <Clients className={"clients"} />
