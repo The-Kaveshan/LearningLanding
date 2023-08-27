@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Badge, Row, Col, Divider, Typography } from "antd";
+import { Card, Badge, Row, Col, Divider } from "antd";
 import Header from "../Header/Header";
 import "./Courses.scss";
 
@@ -65,18 +65,16 @@ const courses = [
   },
 ];
 
-function Courses({className}) {
-  const { Paragraph, Text } = Typography;
-
+function Courses({ className }) {
   return (
-    <div className={className}>
+    <div className={className} role="main">
       <Header
         title={"Discover Your Ideal Course"}
         subtitle={"Embark on Your Learning Journey"}
       />
-      <Row gutter={16}>
+      <Row gutter={16} role="list">
         {courses.map((course, index) => (
-          <Col xs={24} sm={12} md={8} lg={6} key={index}>
+          <Col xs={24} sm={12} md={8} lg={6} key={index} role="listitem">
             <Badge.Ribbon
               text={course.category}
               color={
@@ -89,7 +87,11 @@ function Courses({className}) {
                   : "gray"
               }
             >
-              <Card bordered={false}>
+              <Card 
+                bordered={false}
+                tabIndex={0}
+                aria-label={`Course Title: ${course.title}, Description: ${course.description}, Duration: ${course.length}`}
+              >
                 <h4>{course.title}</h4>
                 <Divider />
                 <p className={"course-text"}>{course.description}</p>
