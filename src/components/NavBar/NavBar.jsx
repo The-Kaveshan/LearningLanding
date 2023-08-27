@@ -3,7 +3,7 @@ import { Menu, Button, Drawer } from "antd";
 
 import { MenuOutlined, CloseOutlined, LoginOutlined } from "@ant-design/icons";
 import "./NavBar.scss";
-import Logo from "../../assets/logo.svg";
+import Logo from "../../assets/images/logo.svg";
 
 function NavBar() {
   const items = [

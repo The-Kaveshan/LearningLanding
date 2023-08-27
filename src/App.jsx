@@ -7,6 +7,7 @@ import { ConfigProvider, Layout, Space } from "antd";
 import Courses from "./components/Courses/Courses";
 import Review from "./components/Review/Review";
 import Facts from "./components/Facts/Facts";
+import Features from "./components/Features/Features";
 import Clients from "./components/Clients/Clients";
 import JoinNow from "./components/JoinNow/JoinNow";
 const { Header, Content } = Layout;
@@ -28,6 +29,7 @@ function App() {
           <Content>
             <Courses className={"course"} />
             <VideoBanner />
+            <Features />
             <Facts className={"facts"} />
             <Review className={"reviews"} />
             <Clients className={"clients"} />

@@ -7,8 +7,8 @@ import {
   InstagramOutlined,
   LinkedinOutlined,
 } from "@ant-design/icons";
-import IconLogo from "../../assets/Icon_Logo.svg";
-import AccreditationLogo from "../../assets/mict-seta-logo.png";
+import IconLogo from "../../assets/images/Icon_Logo.svg";
+import AccreditationLogo from "../../assets/images/mict-seta-logo.png";
 
 function Footer({className}) {
   return (
@@ -81,7 +81,7 @@ function Footer({className}) {
       </div>
 
       <div className="copyright">
-        &copy; 2023 Developed By Kaveshan Kistan. All rights reserved.
+        &copy; 2023 Developed By Kaveshan Kistan for HyperionDev. All rights reserved.
       </div>
     </div>
   );

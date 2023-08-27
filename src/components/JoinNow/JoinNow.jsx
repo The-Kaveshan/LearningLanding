@@ -7,7 +7,7 @@ import {
   DollarCircleFilled,
 } from "@ant-design/icons";
 import "./JoinNow.scss";
-import BackedLogo from "../../assets/facebook-google.png";
+import BackedLogo from "../../assets/images/facebook-google.png";
 import Logo1 from "../../assets/images/awards/switchup.png";
 import Logo2 from "../../assets/images/awards/course-report.png";
 import Logo3 from "../../assets/images/awards/google.png";
