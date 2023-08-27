@@ -69,15 +69,15 @@ function NavBar() {
 
   return (
     <div className="navbar-container">
-      <div className="navbar-logo">
-        <img src={Logo} alt="Logo" />
-      </div>
+      <header className="navbar-logo">
+        <img src={Logo} alt="Company Logo" />
+      </header>
       {isMobile ? (
         <>
           <Drawer
             title={
               <div className="navbar-logo">
-                <img src={Logo} alt="Logo" />
+                <img src={Logo} alt="Company Logo" />
               </div>
             }
             placement="right"
@@ -129,7 +129,7 @@ function NavBar() {
         </>
       ) : (
         <>
-          <Menu mode="horizontal" className="desktop-menu">
+          <Menu mode="horizontal" className="desktop-menu" role="navigation">
             {items.map((item) => {
               if (item.children) {
                 return (

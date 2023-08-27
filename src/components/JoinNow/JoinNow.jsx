@@ -37,7 +37,7 @@ const JoinNow = ({ className }) => {
 
   return (
     <div className={className}>
-      <Row gutter={[24, 24]} justify="center" align="middle">
+      <Row gutter={[24, 24]} justify="center" align="middle" role="main">
         <Col xs={24} md={18} className="text-container">
           <h1>
             Join more than 100,000 students who have registered to learn to code
@@ -57,12 +57,12 @@ const JoinNow = ({ className }) => {
             </div>
           </div>
           <div className="logo">
-            <img src={BackedLogo} alt="Backed by Logo" />
+            <img src={BackedLogo} alt="Logos of institutions backing HyperionDev"/>
           </div>
         </Col>
         <Col xs={24} md={6} className="actions-container">
           {awardsData.map((award, index) => (
-            <Row className={"awards-row"}>
+            <Row className={"awards-row"} key={index}>
               <Col
                 xs={24}
                 sm={24}
@@ -96,8 +96,8 @@ const JoinNow = ({ className }) => {
               </Col>
             </Row>
           ))}
-          <Button className="apply-button">Apply Now</Button>
-          <Button className="contact-button">Contact Us</Button>
+          <Button className="apply-button" aria-label="Apply to HyperionDev">Apply Now</Button>
+          <Button className="contact-button" aria-label="Contact HyperionDev">Contact Us</Button>
         </Col>
       </Row>
     </div>
