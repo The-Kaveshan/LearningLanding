@@ -73,7 +73,7 @@ const Review = ({ className }) => {
               <Card className="review-card" tabIndex="0">
                 <blockquote className="review-text" tabIndex="0">{`"${review.text}"`}</blockquote>
                 <Avatar size={100} src={review.image} alt={`Image of ${review.name}`} />
-                <h4 tabIndex="0">{review.name}</h4>
+                <h2 tabIndex="0">{review.name}</h2>
                 <div className="star-cont" tabIndex="0" aria-label={`Rating: ${review.rating} stars`}>
                   <StarFilled />
                   {review.rating}

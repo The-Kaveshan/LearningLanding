@@ -27,7 +27,8 @@
           margin-top: -7px;
         }
 
-        h4 {
+        h2 {
+          font-size: 15px;
           padding: 0;
           height: 55px;
           margin: 0;
@@ -42,7 +43,8 @@
           align-items: center; /* vertical alignment */
           justify-content: center; /* horizontal alignment */
           margin: 0;
-          color: rgba(0, 0, 0, 0.65)
+          // color: rgba(0, 0, 0, 0.65);
+          color: #474747;
         }
 
         .duration {
@@ -52,6 +54,7 @@
           align-items: center; /* vertical alignment */
           justify-content: center; /* horizontal alignment */
           color: rgba(0,0,0,.35);
+          color: #737373;
           text-transform: uppercase;
           font-weight: 400;
         }

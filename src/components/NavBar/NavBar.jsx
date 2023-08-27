@@ -69,9 +69,9 @@ function NavBar() {
 
   return (
     <div className="navbar-container">
-      <header className="navbar-logo">
+      <div className="navbar-logo">
         <img src={Logo} alt="Company Logo" />
-      </header>
+      </div>
       {isMobile ? (
         <>
           <Drawer
@@ -92,6 +92,7 @@ function NavBar() {
               className={"mobile-menu"}
               mode="inline"
               onClick={(e) => e.domEvent.stopPropagation()}
+              role="menu"
             >
               {items.map((item) => {
                 // For items with children, use a SubMenu
@@ -129,7 +130,7 @@ function NavBar() {
         </>
       ) : (
         <>
-          <Menu mode="horizontal" className="desktop-menu" role="navigation">
+          <Menu mode="horizontal" className="desktop-menu" role="menu">
             {items.map((item) => {
               if (item.items) {
                 return (

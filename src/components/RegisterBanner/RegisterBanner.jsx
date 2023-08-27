@@ -13,7 +13,7 @@ function RegisterBanner() {
   }
 
   return (
-    <div className="animated-banner" role="banner">
+    <div className="animated-banner">
       <Row justify="center">
         <Col xs={22} md={18} lg={16}>
           <Row>

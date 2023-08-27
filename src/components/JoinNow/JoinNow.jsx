@@ -37,7 +37,7 @@ const JoinNow = ({ className }) => {
 
   return (
     <div className={className}>
-      <Row gutter={[24, 24]} justify="center" align="middle" role="main">
+      <Row gutter={[24, 24]} justify="center" align="middle">
         <Col xs={24} md={18} className="text-container">
           <h1>
             Join more than 100,000 students who have registered to learn to code
@@ -90,6 +90,7 @@ const JoinNow = ({ className }) => {
                     percent={award.percent}
                     strokeColor={"#87d068"}
                     showInfo={false}
+                    aria-label={award.title}
                   />
                   <Text className="progress-text">{`${award.rating}/5`}</Text>
                 </div>

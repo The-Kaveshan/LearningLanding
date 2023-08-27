@@ -67,7 +67,7 @@ const courses = [
 
 function Courses({ className }) {
   return (
-    <div className={className} role="main">
+    <div className={className} >
       <Header
         title={"Discover Your Ideal Course"}
         subtitle={"Embark on Your Learning Journey"}
@@ -79,11 +79,11 @@ function Courses({ className }) {
               text={course.category}
               color={
                 course.category === "Online"
-                  ? "blue"
+                  ? "#056DFF"
                   : course.category === "University"
-                  ? "green"
+                  ? "#35850F"
                   : course.category === "On-Site"
-                  ? "orange"
+                  ? "#AE5905"
                   : "gray"
               }
             >
@@ -92,7 +92,7 @@ function Courses({ className }) {
                 tabIndex={0}
                 aria-label={`Course Title: ${course.title}, Description: ${course.description}, Duration: ${course.length}`}
               >
-                <h4>{course.title}</h4>
+                <h2>{course.title}</h2>
                 <Divider />
                 <p className={"course-text"}>{course.description}</p>
                 <p className={"duration"}>{course.length}</p>

@@ -10,12 +10,13 @@ import {
 import IconLogo from "../../assets/images/Icon_Logo.svg";
 import AccreditationLogo from "../../assets/images/mict-seta-logo.png";
 
+
 function Footer({ className }) {
   return (
     <footer className={className}>
       <Row gutter={[16, 16]}>
         <Col span={6}>
-          <h3>Company</h3>
+          <h2>Company</h2>
           <ul>
             <li><a href="#join">Join our team</a></li>
             <li><a href="#privacy">Privacy</a></li>
@@ -27,7 +28,7 @@ function Footer({ className }) {
         </Col>
         
         <Col span={6}>
-          <h3>Employers</h3>
+          <h2>Employers</h2>
           <ul>
             <li><a href="#bootcamps">Bootcamps</a></li>
             <li><a href="#upskill">Upskill your employees</a></li>
@@ -36,7 +37,7 @@ function Footer({ className }) {
         </Col>
 
         <Col span={6}>
-          <h3>Students</h3>
+          <h2>Students</h2>
           <ul>
             <li><a href="#codedidthis">#CodeDidThis</a></li>
             <li><a href="#careers">Coding Careers</a></li>
@@ -47,7 +48,7 @@ function Footer({ className }) {
         </Col>
 
         <Col span={6}>
-          <h3>Popular Topics</h3>
+          <h2>Popular Topics</h2>
           <ul>
             <li><a href="#software">Software Development</a></li>
             <li><a href="#web">Web Development</a></li>
