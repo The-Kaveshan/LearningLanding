@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Card, Avatar, Rate, Typography } from "antd";
+import React from "react";
+import { Card, Avatar, Typography, Carousel } from "antd";
 import "./Review.scss";
 import Header from "../Header/Header";
+import { StarFilled } from "@ant-design/icons";
 
 import Amy from "../../assets/images/reviews/Amy.jpg";
 import Simphiwe from "../../assets/images/reviews/Simphiwe.jpg";
@@ -9,8 +10,8 @@ import Busisiwe from "../../assets/images/reviews/Busisiwe.jpg";
 import Evan from "../../assets/images/reviews/Evan.jpg";
 import Robin from "../../assets/images/reviews/Robin.jpg";
 
-const Review = ({className}) => {
-  const { Title, Text } = Typography;
+const Review = ({ className }) => {
+  const { Text } = Typography;
   const reviews = [
     {
       id: 1,
@@ -45,54 +46,43 @@ const Review = ({className}) => {
       name: "Evan",
       image: Evan,
       rating: 4.5,
-      text: "The bootcamp was transformative for me. I started with almost zero knowledge in coding, and now I'm proud to say I'm working at a top tech company as a junior developer. The guidance, support, and real-world projects were beyond my expectations!",
+      text: " I started with almost zero knowledge in coding, and now I'm proud to say I'm working at a top tech company as a junior developer.",
     },
   ];
-
-  const [isVisible, setIsVisible] = useState(false);
-  // const reviewRef = useRef(null);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (reviewRef.current) {
-  //       const rect = reviewRef.current.getBoundingClientRect();
-  //       if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-  //         setIsVisible(true);
-  //         // Remove event listener once the element is in view
-  //         window.removeEventListener("scroll", handleScroll);
-  //       }
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-
   return (
     <div className={className}>
       <Header
         title={"Inspiring Tales of Tomorrow's Visionaries"}
         subtitle={""}
       />
-      {/* <div
-        className={`reviews-container ${isVisible ? "fadeIn" : ""}`}
-        ref={reviewRef}
-      > */}
-        {reviews.map((review) => (
-          <Card key={review.id} className="review-card">
-            <Avatar size={100} src={review.image} />
-            <Title level={3}>{review.name}</Title>
-            <Rate
-              allowHalf
-              value={review.rating}
-              disabled
-              className="ant-rate"
-            />
-            <Text>{review.text}</Text>
-          </Card>
-        ))}
+      <div className="carousel-container">
+        <Carousel
+          dots
+          draggable
+          slidesToShow={4}
+          autoplay
+          infinite
+          responsive={[
+            { breakpoint: 768, settings: { slidesToShow: 1 } },
+            { breakpoint: 992, settings: { slidesToShow: 4 } },
+          ]}
+        >
+          {reviews.map((review) => (
+            <div className="slide" key={review.id}>
+              <Card className="review-card">
+                <Text className="review-text">{`"${review.text}"`}</Text>
+                <Avatar size={100} src={review.image} />
+                <h4>{review.name}</h4>
+                <div class="star-cont">
+                  <StarFilled />
+                  {review.rating}
+                </div>
+              </Card>
+            </div>
+          ))}
+        </Carousel>
       </div>
-    // </div>
+    </div>
   );
 };
 
