@@ -13,13 +13,13 @@ function RegisterBanner() {
   }
 
   return (
-    <div className="animated-banner">
+    <div className="animated-banner" role="banner">
       <Row justify="center">
         <Col xs={22} md={18} lg={16}>
           <Row>
             <Col xs={24} md={18}>
               <Space>
-                <Text className="text">
+                <Text className="text" role="heading" aria-level="2">
                   Participate in Our Upcoming Informational Webinar Session!
                 </Text>
               </Space>
@@ -35,6 +35,7 @@ function RegisterBanner() {
                     border: "1.5px solid #FFFFFF",
                     color: "#FFFFFF",
                   }}
+                  aria-label="Register for the webinar"
                 >
                   Register Now
                 </Button>
@@ -53,6 +54,7 @@ function RegisterBanner() {
             position: "absolute",
             top: "0",
           }}
+          aria-label="Close banner"
           onClick={() => setIsVisible(false)}
         />
       </Row>
