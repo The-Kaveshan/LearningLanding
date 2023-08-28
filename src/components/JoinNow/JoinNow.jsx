@@ -41,7 +41,7 @@ const JoinNow = ({ className }) => {
 
   return (
     <div className={className}>
-      <Row gutter={[24, 24]} justify="center" align="middle">
+      <Row justify="center" align="middle">
         <Col xs={24} md={18} className="text-container">
           <h1>
             Join more than 100,000 students who have registered to learn to code
@@ -105,7 +105,7 @@ const JoinNow = ({ className }) => {
             </Row>
           ))}
           <Row className="buttons">
-            <Col xs={24} sm={24} md={24} lg={12}>
+            <Col xs={24} sm={24} md={24} lg={24} xl={12}>
               <Button
                 className="button icon-animate"
                 aria-label="Apply to HyperionDev"
@@ -114,7 +114,7 @@ const JoinNow = ({ className }) => {
                 Apply Now
               </Button>
             </Col>
-            <Col xs={24} sm={24} md={24} lg={12}>
+            <Col xs={24} sm={24} md={24} lg={24} xl={12}>
               <Button
                 className="button icon-animate"
                 aria-label="Contact HyperionDev"
