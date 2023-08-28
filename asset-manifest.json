@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/LearningLanding/static/css/main.debd379d.css",
-    "main.js": "/LearningLanding/static/js/main.886218ee.js",
+    "main.css": "/LearningLanding/static/css/main.2d63eb85.css",
+    "main.js": "/LearningLanding/static/js/main.799f4c25.js",
     "static/js/787.0c3f432a.chunk.js": "/LearningLanding/static/js/787.0c3f432a.chunk.js",
     "static/media/hyperion.mp4": "/LearningLanding/static/media/hyperion.b4b7dce14c78c04e61cc.mp4",
     "static/media/Evan.jpg": "/LearningLanding/static/media/Evan.ba957c6968173dc99b95.jpg",
@@ -14,12 +14,12 @@
     "static/media/logo.svg": "/LearningLanding/static/media/logo.b8afca1f903561749d99962809b77766.svg",
     "index.html": "/LearningLanding/index.html",
     "static/media/Icon_Logo.svg": "/LearningLanding/static/media/Icon_Logo.075191eb7717004d7a4df80e03c37300.svg",
-    "main.debd379d.css.map": "/LearningLanding/static/css/main.debd379d.css.map",
-    "main.886218ee.js.map": "/LearningLanding/static/js/main.886218ee.js.map",
+    "main.2d63eb85.css.map": "/LearningLanding/static/css/main.2d63eb85.css.map",
+    "main.799f4c25.js.map": "/LearningLanding/static/js/main.799f4c25.js.map",
     "787.0c3f432a.chunk.js.map": "/LearningLanding/static/js/787.0c3f432a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.debd379d.css",
-    "static/js/main.886218ee.js"
+    "static/css/main.2d63eb85.css",
+    "static/js/main.799f4c25.js"
   ]
 }
