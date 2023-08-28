@@ -5,6 +5,8 @@ import {
   CodeFilled,
   GlobalOutlined,
   DollarCircleFilled,
+  PhoneOutlined,
+  ExportOutlined,
 } from "@ant-design/icons";
 import "./JoinNow.scss";
 import BackedLogo from "../../assets/images/facebook-google.png";
@@ -59,7 +61,10 @@ const JoinNow = ({ className }) => {
             </div>
           </div>
           <div className="logo">
-            <img src={BackedLogo} alt="Logos of institutions backing HyperionDev"/>
+            <img
+              src={BackedLogo}
+              alt="Logos of institutions backing HyperionDev"
+            />
           </div>
         </Col>
         <Col xs={24} md={6} className="actions-container">
@@ -99,8 +104,25 @@ const JoinNow = ({ className }) => {
               </Col>
             </Row>
           ))}
-          <Button className="apply-button" aria-label="Apply to HyperionDev">Apply Now</Button>
-          <Button className="contact-button" aria-label="Contact HyperionDev">Contact Us</Button>
+          <Row className="buttons">
+            <Col xs={24} sm={24} md={24} lg={12}>
+              <Button
+                className="button icon-animate"
+                aria-label="Apply to HyperionDev"
+              >
+                <ExportOutlined />
+                Apply Now
+              </Button>
+            </Col>
+            <Col xs={24} sm={24} md={24} lg={12}>
+              <Button
+                className="button icon-animate"
+                aria-label="Contact HyperionDev"
+              >
+                <PhoneOutlined /> Contact Us
+              </Button>
+            </Col>
+          </Row>
         </Col>
       </Row>
     </div>

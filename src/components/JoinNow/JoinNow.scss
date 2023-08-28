@@ -52,14 +52,18 @@
       }
     }
   }
-  .apply-button,
-  .contact-button {
-    margin: 0.5rem;
-    font-size: $font-size4;
+  .buttons {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .button{
+      margin: 0.5rem;
+      font-size: $font-size4;
 
-    background: "transparent";
-    color: $secondary-rgb;
-    border-color: $secondary-rgb;
+      background: "transparent";
+      color: $primary-rgb;
+      border-color: $primary-rgb;
+    }
   }
 }
 
