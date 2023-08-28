@@ -1,26 +1,29 @@
+@import "../../variables";
 .animated-banner {
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
-  background: rgb(71, 23, 157);
-  background: linear-gradient(
-    90deg,
-    rgba(71, 23, 157, 1) 0%,
-    rgba(23, 149, 232, 1) 49%,
-    rgba(71, 23, 157, 1) 100%
-  );
-  color: white;
+  background: $primary-rgb;
+  background: $gradient;
+  color: $white-0;
   padding: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  @include box-shadow;
   animation: slideDown 0.5s ease-out;
   z-index: 999;
   width: 100%;
 
   .text {
-    color: #FFFFFF;
+    color: $white-0;
     font-size: 1.5em;
   }
+}
+
+.register-button {
+  background: "transparent";
+  border-radius: 0;
+  border: 1.5px solid #ffffff !important;
+  color: "#FFFFFF";
 }
 
 @keyframes slideDown {
@@ -47,8 +50,8 @@
     }
 
     .text {
-        font-size: 1em;
-      }
+      font-size: 1em;
+    }
   }
 
   .animated-banner .ant-row > .ant-col {

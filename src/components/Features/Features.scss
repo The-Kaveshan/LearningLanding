@@ -1,3 +1,4 @@
+@import "../../variables";
 .ant-row {
   width: 100%;
 }
@@ -6,17 +7,17 @@
   text-align: left;
   .ant-timeline-item {
     font-size: 1.25em;
-    color: rgba(0, 0, 0, 0.75);
+    color: $black-2;
   }
 
   .custom-timeline-dot {
-    background-color: rgba(23, 149, 232, 1); // Change to desired color
+    background-color: $secondary-rgb;
+    color: $secondary-rgb;
     border-radius: 50%;
     width: 8px;
     height: 8px;
   }
 }
-
 .ant-image {
   img {
     max-width: 100%;

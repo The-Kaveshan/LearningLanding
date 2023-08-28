@@ -1,0 +1,41 @@
+
+// Accents
+$primary-rgb: rgba(23, 65, 157, 1);
+$secondary-rgb: rgba(23, 149, 232, 1); 
+$gradient: linear-gradient(250deg, $primary-rgb 0%, $secondary-rgb 50%, $primary-rgb 100%);
+$background-offset: #F5F7F8;
+
+// Shades of Black
+$black-0: rgba(0, 0, 0, 1);
+$black-1: rgba(0, 0, 0, 0.90);
+$black-2: rgba(0, 0, 0, 0.80);
+$black-3: rgba(0, 0, 0, 0.70);
+$black-4: rgba(0, 0, 0, 0.60);
+$black-5: rgba(0, 0, 0, 0.50);
+$black-6: rgba(0, 0, 0, 0.40);
+
+// Shades of White
+$white-0: rgba(255, 255, 255, 1);
+$white-1: rgba(255, 255, 255, 0.90);
+$white-2: rgba(255, 255, 255, 0.80);
+$white-3: rgba(255, 255, 255, 0.70);
+$white-4: rgba(255, 255, 255, 0.60);
+
+// Rating Star
+$star-primary: rgba(250, 219, 20, 1);
+$star-background: rgba(250, 173, 20, 0.15);
+
+// Color Exports
+:export {
+  white: #FFFFFF;
+  black: #000000;
+  progress: #87d068;
+  ribbon1: #056DFF;
+  ribbon2: #35850F;
+  ribbon3: #AE5905;
+}
+
+// Mixin's
+@mixin box-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+}

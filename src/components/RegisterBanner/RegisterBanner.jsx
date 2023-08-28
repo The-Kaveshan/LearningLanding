@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Typography, Space, Row, Col } from "antd";
 import { CloseOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import "./RegisterBanner.scss";
+import colors from "../../_variables.scss";
 
 const { Text } = Typography;
 
@@ -11,7 +12,6 @@ function RegisterBanner() {
   if (!isVisible) {
     return null;
   }
-
   return (
     <div className="animated-banner">
       <Row justify="center">
@@ -32,9 +32,9 @@ function RegisterBanner() {
                   style={{
                     background: "transparent",
                     borderRadius: "0",
-                    border: "1.5px solid #FFFFFF",
-                    color: "#FFFFFF",
+                    color: `${colors.white}`,
                   }}
+                  className={'register-button'}
                   aria-label="Register for the webinar"
                 >
                   Register Now
@@ -49,7 +49,7 @@ function RegisterBanner() {
           style={{
             background: "transparent",
             borderRadius: "0",
-            color: "#FFFFFF",
+            color: `${colors.white}`,
             right: 0,
             position: "absolute",
             top: "0",

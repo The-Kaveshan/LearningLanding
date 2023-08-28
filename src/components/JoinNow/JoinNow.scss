@@ -1,11 +1,12 @@
+@import "../../variables";
 .text-container {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #ffffff !important;
+  color: $white-0;
   h1 {
     font-size: 1.5rem;
-    color: #ffffff;
+    color: $white-0;
   }
 
   .features {
@@ -34,7 +35,7 @@
 .actions-container {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 1);
+  background: $white-0;
   border-radius: 10px;
   padding: 10px 0;
   .awards-row {
@@ -46,8 +47,7 @@
       }
       .progress-text {
         text-align: right;
-        color: rgba(0, 0, 0, 0.5);
-        color: #737373;
+        color: $black-4;
       }
     }
   }
@@ -59,8 +59,8 @@
 
     background: "transparent";
     border-radius: 0;
-    color: #127ABF;
-    border-color: #127ABF;
+    color: $secondary-rgb;
+    border-color: $secondary-rgb;
   }
 }
 

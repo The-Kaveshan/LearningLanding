@@ -12,6 +12,8 @@ import Logo1 from "../../assets/images/awards/switchup.png";
 import Logo2 from "../../assets/images/awards/course-report.png";
 import Logo3 from "../../assets/images/awards/google.png";
 import { Typography } from "antd";
+import colors from "../../_variables.scss";
+
 const JoinNow = ({ className }) => {
   const { Text } = Typography;
   const awardsData = [
@@ -88,7 +90,7 @@ const JoinNow = ({ className }) => {
                 <div className="progress">
                   <Progress
                     percent={award.percent}
-                    strokeColor={"#87d068"}
+                    strokeColor={colors.progress}
                     showInfo={false}
                     aria-label={award.title}
                   />

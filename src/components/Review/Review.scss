@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .carousel-container {
   width: 100%;
   margin: 20px auto;
@@ -22,8 +24,8 @@
     align-items: center;
     text-align: center;
     border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: $white-0;
+    @include box-shadow;
     transition: transform 0.3s ease-in-out;
 
     .review-text {
@@ -34,7 +36,7 @@
       align-items: center;
       justify-content: center;
       margin: 0;
-      color: rgba(0, 0, 0, 0.65);
+      color: $black-3;
     }
 
     h2 {
@@ -44,12 +46,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: rgba(0, 0, 0, 0.88);
+      color: $black-1;
       font-size: 15px;
     }
 
     .star-cont {
-      background: rgba(250, 173, 20, 0.15);
+      background: $star-background;
       width: 60px;
       height: 22px;
       line-height: 22px;
@@ -58,10 +60,10 @@
       align-items: center;
       margin: 0 auto;
       justify-content: center;
-      color: rgba(0, 0, 0, 0.88);
+      color: $black-1;
 
       .anticon {
-        color: #fadb14;
+        color: $star-primary;
         margin-right: 5px;
         margin-top: 4px;
       }
@@ -75,15 +77,15 @@
 
   li {
     button {
-      background-color: rgba(71, 23, 157, 1) !important;
+      background-color: $primary-rgb !important;
       &:focus,
       &:active {
-        background-color: rgba(23, 149, 232, 1) !important;
+        background-color: $secondary-rgb !important;
       }
     }
     &.slick-active {
       button {
-        background-color: rgba(23, 149, 232, 1) !important;
+        background-color: $secondary-rgb !important;
       }
     }
   }

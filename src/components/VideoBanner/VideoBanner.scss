@@ -1,3 +1,4 @@
+@import "../../variables";
 .video-banner {
   position: relative;
   overflow: hidden;
@@ -26,15 +27,15 @@
 
     button {
       padding: 10px 20px;
-      background-color: rgba(0, 0, 0, 0.6);
-      color: #fff;
+      background-color: $black-5;
+      color: $white-0;
       border: none;
       border-radius: 0;
       cursor: pointer;
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: $black-1;
       }
     }
   }

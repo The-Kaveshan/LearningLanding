@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Badge, Row, Col, Divider } from "antd";
 import Header from "../Header/Header";
 import "./Courses.scss";
+import colors from "../../_variables.scss";
 
 const courses = [
   {
@@ -79,12 +80,12 @@ function Courses({ className }) {
               text={course.category}
               color={
                 course.category === "Online"
-                  ? "#056DFF"
+                  ? colors.ribbon1
                   : course.category === "University"
-                  ? "#35850F"
+                  ? colors.ribbon2
                   : course.category === "On-Site"
-                  ? "#AE5905"
-                  : "gray"
+                  ? colors.ribbon3
+                  : colors.black
               }
             >
               <Card 

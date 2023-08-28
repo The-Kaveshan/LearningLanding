@@ -1,3 +1,5 @@
+@import "./variables";
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -10,31 +12,26 @@ body {
 
 .headerStyle {
   text-align: "center";
-  color: "#fff";
+  color: $white-0;
   height: auto;
   padding-inline: 0;
   position: sticky;
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid transparent;
-  border-image:  linear-gradient(
-    90deg,
-    rgba(71, 23, 157, 1) 0%,
-    rgba(23, 149, 232, 1) 49%,
-    rgba(71, 23, 157, 1) 100%
-  );
+  border-image:  $gradient;
   border-image-slice: 1;
+  background-color: $white-0;
 }
-
 .clients {
   padding: 2rem;
   text-align: center;
-  background: #FFFFFF;
+  background: $white-0;
 }
 
 .facts {
   padding: 2rem;
-  background-color: #FFFFFF;
+  background-color: $white-0;
   text-align: center;
 }
 
@@ -46,35 +43,29 @@ body {
 
 .course {
   text-align: center;
-  background-color: #f5f7f8;
+  background-color: $background-offset;
   padding: 2rem;
-  color: rgba(0, 0, 0, 0.88);
 }
 
 .reviews {
   text-align: center;
-  background-color: #f5f7f8;
+  background-color: $background-offset;
+  
   padding: 2rem;
-  gap: 20px; // Spacing between cards
-  justify-content: center; // Center cards for better alignment
+  gap: 20px;
+  justify-content: center;
 }
 
 .join-now {
-  background: rgb(71, 23, 157);
-  background: linear-gradient(
-    90deg,
-    rgba(71, 23, 157, 1) 0%,
-    rgba(23, 149, 232, 1) 49%,
-    rgba(71, 23, 157, 1) 100%
-  );
+  background: $primary-rgb;
+  background: $gradient;
   padding: 2rem;
 }
 
 .footer {
-  width: 100%;  // Making sure it spans the full width
-  background-color: #333;
-  padding: 2rem 0; // Adding vertical padding for better design
-  color: #FFFFFF;
+  width: 100%; 
+  background-color: $black-1;
+  padding: 2rem 0;
   text-align: center;
 }
 

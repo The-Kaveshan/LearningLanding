@@ -1,3 +1,4 @@
+@import "../../variables";
 .course {
 
   .ant-row {
@@ -6,20 +7,18 @@
 
     .ant-col {
       display: flex;
-      padding: 10px; // Added for better appearance
+      padding: 10px;
 
       .ant-badge {
-        flex: 1; // Makes sure each badge (with card inside) takes full height
+        flex: 1;
         display: flex;
       }
 
       .ant-card {
-        flex: 1; // Allows the card to grow and consume available height
+        flex: 1;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; // Distributes space between card content
-        // background: pink;
-        // height: 100vh;
+        justify-content: space-between; 
         .ant-card-body {
           min-height: 100%;
         }
@@ -33,28 +32,26 @@
           height: 55px;
           margin: 0;
           display: flex;
-          align-items: center; /* vertical alignment */
-          justify-content: center; /* horizontal alignment */
+          align-items: center;
+          justify-content: center; 
         }
 
         .course-text {
           min-height: 100px;
           display: flex;
-          align-items: center; /* vertical alignment */
-          justify-content: center; /* horizontal alignment */
+          align-items: center;
+          justify-content: center; 
           margin: 0;
-          // color: rgba(0, 0, 0, 0.65);
-          color: #474747;
+          color: $black-3;
         }
 
         .duration {
           height: 20px;
           margin: 10px 0 0 0 ;
           display: flex;
-          align-items: center; /* vertical alignment */
-          justify-content: center; /* horizontal alignment */
-          color: rgba(0,0,0,.35);
-          color: #737373;
+          align-items: center;
+          justify-content: center;
+          color: $black-4;
           text-transform: uppercase;
           font-weight: 400;
         }

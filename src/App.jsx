@@ -17,12 +17,7 @@ function App() {
     <div>
       <Space direction="vertical" style={{ width: "100%" }} size={[0, 48]}>
         <Layout>
-          <Header
-            className="headerStyle"
-            style={{
-              background: "#FFFFFF",
-            }}
-          >
+          <Header className="headerStyle">
             <RegisterBanner />
             <NavBar />
           </Header>
@@ -35,7 +30,7 @@ function App() {
             <Clients className={"clients"} />
             <JoinNow className={"join-now"} />
           </Content>
-          <Footer className={'footer'}/>
+          <Footer className={"footer"} />
         </Layout>
       </Space>
     </div>
