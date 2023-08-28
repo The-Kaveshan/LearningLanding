@@ -10,19 +10,14 @@
 }
 
 .slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include align-center;
   height: auto;
   background: transparent;
   padding: 10px;
   transition: transform 0.3s ease-in-out;
 
   .review-card {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     border-radius: 10px;
     background-color: $white-0;
     @include box-shadow;
@@ -30,11 +25,9 @@
 
     .review-text {
       min-height: 120px;
-      font-size: 15px;
+      font-size: $font-size4;
       font-style: oblique;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include align-center;
       margin: 0;
       color: $black-3;
     }
@@ -43,11 +36,9 @@
       padding: 0;
       height: 55px;
       margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include align-center;
       color: $black-1;
-      font-size: 15px;
+      font-size: $font-size4;
     }
 
     .star-cont {
@@ -56,10 +47,7 @@
       height: 22px;
       line-height: 22px;
       border-radius: 10px;
-      text-align: center;
-      align-items: center;
       margin: 0 auto;
-      justify-content: center;
       color: $black-1;
 
       .anticon {
@@ -72,7 +60,6 @@
 }
 
 .slick-dots {
-  align-items: center;
   bottom: -25px !important;
 
   li {

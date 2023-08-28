@@ -1,8 +1,7 @@
 @import "../../variables";
 .navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include align-center;
+  justify-content: space-between !important;
   background-color: $white-0;
   height: 100%;
   padding-inline: 50px;
@@ -17,10 +16,9 @@
   border-bottom: none;
 
   .ant-menu-item {
-    margin-right: 20px;   
+    margin-right: 20px;
   }
 
-  /* Ensure the last menu item doesn't have unnecessary margin on the right */
   .ant-menu-item:last-child {
     margin-right: 0;
   }
@@ -36,14 +34,13 @@
 }
 
 .ant-menu-submenu {
-
   .ant-menu.ant-menu-sub {
-  color: $black-4;
+    color: $black-4;
   }
   .sub-menu {
-    font-weight:600;
+    font-weight: 600;
     color: $black-1;
-  } 
+  }
 }
 .custom-drawer {
   .ant-drawer-header {
@@ -53,7 +50,7 @@
   .ant-drawer-close {
     left: unset;
     right: 0;
-    font-size: 25px;
+    font-size: $font-size1;
   }
 
   .ant-menu-submenu {

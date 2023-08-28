@@ -35,7 +35,20 @@ $star-background: rgba(250, 173, 20, 0.15);
   ribbon3: #AE5905;
 }
 
+// Font Sizes
+$font-size1: 2em;
+$font-size2: 1.5em;
+$font-size3: 1.25em;
+$font-size4: 1em;
+$font-size5: 0.85em;
+
 // Mixin's
 @mixin box-shadow {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+}
+
+@mixin align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
 }

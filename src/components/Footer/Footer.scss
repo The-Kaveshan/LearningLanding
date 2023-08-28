@@ -2,13 +2,12 @@
 .footer {
   h2 {
     color: $white-0;
-    font-size: 15px;
+    font-size: $font-size4;
   }
 
   ul {
     list-style-type: none;
     padding-left: 0;
-    
 
     li {
       margin-bottom: 0.5rem;
@@ -28,11 +27,9 @@
     text-align: center;
     color: $white-4;
     .logos {
-      display: flex;
-      justify-content: center; // Center logos horizontally
-      align-items: center; // Center logos vertically
+      @include align-center;
       margin: 0 auto;
-      gap: 20px; // Optional: space between logos
+      gap: 20px;
 
       .logo {
         text-align: center;
@@ -44,13 +41,6 @@
           display: block;
           margin: 0 auto;
         }
-
-        &.logo-right {
-          p {
-            margin-top: 5px;
-            font-size: 14px;
-          }
-        }
       }
     }
     span {
@@ -59,8 +49,8 @@
     .social-links {
       .anticon {
         margin: 10px 15px;
-        font-size: 25px;
-        color:  $white-0;
+        font-size: $font-size1;
+        color: $white-0;
         &:hover {
           cursor: pointer;
           color: $secondary-rgb;
@@ -75,7 +65,7 @@
     color: $white-4;
   }
 }
-// Mobile responsiveness
+
 @media (max-width: 768px) {
   .social-section {
     .logos {

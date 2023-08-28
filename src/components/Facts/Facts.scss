@@ -1,17 +1,15 @@
 @import "../../variables";
 
 .facts-stats {
-  justify-content: center;
-
   .ant-statistic-title {
-    font-size: 16px;
+    font-size: $font-size4;
     font-weight: bold;
     margin-top: 10px;
     color: $black-1;
   }
 
   .ant-statistic-content {
-    font-size: 24px;
+    font-size: $font-size1;
     margin-bottom: 10px;
     color: $black-3;
   }

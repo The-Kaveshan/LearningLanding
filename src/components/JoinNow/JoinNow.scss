@@ -1,23 +1,19 @@
 @import "../../variables";
 .text-container {
-  align-items: center;
-  justify-content: center;
   text-align: center;
   color: $white-0;
   h1 {
-    font-size: 1.5rem;
+    font-size: $font-size2;
     color: $white-0;
   }
 
   .features {
-    font-size: 1rem;
+    font-size: $font-size4;
 
     div {
-      margin: 10px 0;
-
       .anticon {
         margin-right: 10px;
-        font-size: 1rem;
+        font-size: $font-size4;
       }
     }
   }
@@ -55,7 +51,7 @@
   .apply-button,
   .contact-button {
     margin: 0.5rem;
-    font-size: 1rem;
+    font-size: $font-size4;
 
     background: "transparent";
     border-radius: 0;
