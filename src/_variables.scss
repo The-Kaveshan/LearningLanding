@@ -52,3 +52,18 @@ $font-size5: 0.85em;
   align-items: center;
   justify-content: center; 
 }
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin rotate-icon {
+  .anticon {
+    animation: rotation 0.25s normal linear;
+  }
+}

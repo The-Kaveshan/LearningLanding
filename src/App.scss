@@ -78,3 +78,7 @@ body {
     gap: 10px;
   }
 }
+
+.icon-animate:hover {
+  @include rotate-icon;
+}

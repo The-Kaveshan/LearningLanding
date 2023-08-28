@@ -34,7 +34,7 @@ function RegisterBanner() {
                     borderRadius: "0",
                     color: `${colors.white}`,
                   }}
-                  className={'register-button'}
+                  className={'register-button icon-animate'}
                   aria-label="Register for the webinar"
                 >
                   Register Now

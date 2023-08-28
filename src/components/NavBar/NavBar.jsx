@@ -115,14 +115,13 @@ function NavBar() {
                   </Menu.Item>
                 );
               })}
-              <Menu.Item key={"login"}>
+              <Menu.Item key={"login"} className={'icon-animate'} >
                 <LoginOutlined style={{marginRight: '5px'}}/>
                 <a href={"/"}>Login</a>
               </Menu.Item>
             </Menu>
           </Drawer>
           <Button
-            className="mobile-menu-toggle"
             onClick={showDrawer}
             type="text"
             icon={<MenuOutlined />}
@@ -150,7 +149,7 @@ function NavBar() {
               );
             })}
           </Menu>
-          <Button style={{ borderRadius: 0}} icon={<LoginOutlined />}>Login</Button>
+          <Button style={{ borderRadius: 0}} className={'icon-animate'} icon={<LoginOutlined />}>Login</Button>
         </>
       )}
     </div>
