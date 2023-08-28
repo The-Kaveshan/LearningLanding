@@ -73,7 +73,7 @@ function Courses({ className }) {
         title={"Master the Stack, Fast-Track Your Career: Unleashing the Power of Tech Skills"}
         subtitle={"Embark on Your Learning Journey"}
       />
-      <Row gutter={16} role="list">
+      <Row role="list">
         {courses.map((course, index) => (
           <Col xs={24} sm={12} md={8} lg={6} key={index} role="listitem">
             <Badge.Ribbon
