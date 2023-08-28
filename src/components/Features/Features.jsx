@@ -6,19 +6,19 @@ import Header from "../Header/Header";
 
 const Features = ({ className }) => {
   const features = [
-    "Take advantage of career development and networking opportunities in the HyperionDev Graduate Program.",
-    "Get the best possible preparation for your new career in tech, with mock interviews, assistance with polishing your CV and developer portfolio, and professional interview tips from our in-house career services team.",
-    "Every piece of code you write is reviewed by professionals who check and refine code for some of the biggest companies out there.",
-    "Expert on-demand feedback will get you writing efficient, error-free code, and keep you from getting stuck.",
-    "Learn from anywhere, in a structure that fits your needs, life, and goals.",
-    "We’re passionate about allowing everyone to have equal access to a tech career. Our bootcamps can be taken online or on our campuses, full-time or part-time.",
+    "<b>Career Boost with HyperionDev Graduate Program:</b> Build a strong career network with exclusive opportunities through our Graduate Program for enhanced career development.",
+    "<b>Comprehensive Career Support:</b> Beyond teaching code, we focus on careers. Get mock interviews, personalized CV/portfolio reviews, and insider interview tips from our Career Services Team.",
+    "<b>Code Review by Industry Experts:</b> Code to industry standards. Each line undergoes thorough review by pros from top tech companies.",
+    "<b>On-Demand Expert Feedback:</b> Receive swift help from our experts. Message for timely, effective feedback to ensure efficient, error-free code.",
+    "<b>Flexible Learning Environment:</b> Tailor learning to your lifestyle. Choose online/campus, full/part-time. Accessible tech education, your way.",
+    "<b>Inclusive Tech Education:</b> Tech for all. Online/on-campus, full/part-time – equal access to tech careers is our commitment.",
   ];
 
   return (
     <section className={className}>
       <Header
-        title={"What Sets Us Apart"}
-        subtitle={"We'll take you from beginner to job ready"}
+        title={"What Makes Us Unique"}
+        subtitle={"Go From Novice to Industry-Ready"}
       />
       <Row gutter={[16, 16]} align="middle">
         <Col xs={24} md={12} className="timeline-column">
@@ -28,7 +28,7 @@ const Features = ({ className }) => {
                 key={index}
                 dot={<div className="custom-timeline-dot"></div>}
               >
-                {item}
+                <div dangerouslySetInnerHTML={{ __html: item }} />
               </Timeline.Item>
             ))}
           </Timeline>

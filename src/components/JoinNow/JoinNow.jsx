@@ -69,7 +69,7 @@ const JoinNow = ({ className }) => {
                 xs={24}
                 sm={24}
                 md={24}
-                lg={3}
+                lg={24}
                 key={`awards-1-${index}`}
                 className="award-col"
               >
@@ -82,7 +82,7 @@ const JoinNow = ({ className }) => {
                 xs={24}
                 sm={24}
                 md={24}
-                lg={21}
+                lg={24}
                 key={`awards-2-${index}`}
                 className="award-col"
               >

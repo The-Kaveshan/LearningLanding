@@ -31,7 +31,6 @@ function RegisterBanner() {
                   icon={<ArrowRightOutlined />}
                   style={{
                     background: "transparent",
-                    borderRadius: "0",
                     color: `${colors.white}`,
                   }}
                   className={'register-button icon-animate'}
@@ -48,7 +47,6 @@ function RegisterBanner() {
           type="text"
           style={{
             background: "transparent",
-            borderRadius: "0",
             color: `${colors.white}`,
             right: 0,
             position: "absolute",

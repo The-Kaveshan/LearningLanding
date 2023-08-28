@@ -36,25 +36,28 @@
   padding: 10px 0;
   .awards-row {
     margin-top: 15px;
-    .progress {
-      .ant-progress {
-        width: 85%;
-        margin-right: 10px;
-      }
-      .progress-text {
-        text-align: right;
-        color: $black-4;
+    .award-col {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      .progress {
+        .ant-progress {
+          width: 85%;
+          margin-right: 10px;
+        }
+        .progress-text {
+          text-align: right;
+          color: $black-4;
+        }
       }
     }
   }
-
   .apply-button,
   .contact-button {
     margin: 0.5rem;
     font-size: $font-size4;
 
     background: "transparent";
-    border-radius: 0;
     color: $secondary-rgb;
     border-color: $secondary-rgb;
   }

@@ -9,52 +9,52 @@ const courses = [
     title: "Certified Full Stack Web & Software Engineer bootcamp",
     description:
       "Learn to create complex and powerful software, apps, and websites in our most advanced Immersive bootcamp.",
-    length: "12 months part-time | 6 months full-time",
+    length: "12 months part-time &#x2022; 6 months full-time",
     category: "Online",
   },
   {
     title: "Software Engineer bootcamp",
     description:
       "Go from newbie to software engineer in no time. Learn everything you need to create amazing computer programs and software.",
-    length: "6 months part-time | 3 months full-time",
+    length: "6 months part-time &#x2022; 3 months full-time",
     category: "Online",
   },
   {
     title: "Data Scientist bootcamp",
     description:
       "Learn to use classic machine learning models and popular data science tools to work with data to empower business, research, and technology.",
-    length: "6 months part-time | 3 months full-time",
+    length: "6 months part-time &#x2022; 3 months full-time",
     category: "Online",
   },
   {
     title: "Full Stack Web Developer bootcamp",
     description:
       "Master frontend & backend web development to build database-driven web apps using the powerful MERN stack.",
-    length: "6 months part-time | 3 months full-time",
+    length: "6 months part-time &#x2022; 3 months full-time",
     category: "Online",
   },
   {
     title:
-      "Stellenbosch University Web Development Bootcamp in Partnership with HyperionDev",
+      "Stellenbosch University Web Development Bootcamp",
     description:
       "Master frontend & backend web development to build database-driven web apps using the powerful MERN stack.",
-    length: "6 months part-time | 3 months full-time",
+    length: "6 months part-time &#x2022; 3 months full-time",
     category: "University",
   },
   {
     title:
-      "Stellenbosch University Software Engineering Bootcamp in Partnership with HyperionDev",
+      "Stellenbosch University Software Engineering Bootcamp",
     description:
       "Go from newbie to software engineer in no time. Learn everything you need to create amazing computer programs and software.",
-    length: "6 months part-time | 3 months full-time",
+    length: "6 months part-time &#x2022; 3 months full-time",
     category: "University",
   },
   {
     title:
-      "Stellenbosch University Data Science Bootcamp in Partnership with HyperionDev",
+      "Stellenbosch University Data Science Bootcamp",
     description:
       "Learn to use classic machine learning models and popular data science tools to work with data to empower business, research, and technology.",
-    length: "6 months part-time | 3 months full-time",
+    length: "6 months part-time &#x2022; 3 months full-time",
     category: "University",
   },
   {
@@ -70,7 +70,7 @@ function Courses({ className }) {
   return (
     <div className={className} >
       <Header
-        title={"Discover Your Ideal Course"}
+        title={"Master the Stack, Fast-Track Your Career: Unleashing the Power of Tech Skills"}
         subtitle={"Embark on Your Learning Journey"}
       />
       <Row gutter={16} role="list">
@@ -96,7 +96,7 @@ function Courses({ className }) {
                 <h2>{course.title}</h2>
                 <Divider />
                 <p className={"course-text"}>{course.description}</p>
-                <p className={"duration"}>{course.length}</p>
+                <p className={"duration"} dangerouslySetInnerHTML={{ __html: course.length }}></p>
               </Card>
             </Badge.Ribbon>
           </Col>

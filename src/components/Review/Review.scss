@@ -24,7 +24,7 @@
     transition: transform 0.3s ease-in-out;
 
     .review-text {
-      min-height: 120px;
+      min-height: 140px;
       font-size: $font-size4;
       font-style: oblique;
       @include align-center;
@@ -75,5 +75,28 @@
         background-color: $secondary-rgb !important;
       }
     }
+  }
+}
+
+@media (min-width: 600px) {
+  .review-text {
+    height: auto !important;
+  }
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+  .review-text {
+    height: 260px !important;
+  }
+}
+
+@media (min-width: 1281px) {
+  .review-text {
+    height: auto;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1281px) {
+  .review-text {
+    height: 240px !important;
   }
 }

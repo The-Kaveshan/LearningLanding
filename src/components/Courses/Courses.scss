@@ -18,14 +18,11 @@
         .ant-card-body {
           min-height: 100%;
         }
-        .ant-ribbon {
-          margin-top: -7px;
-        }
 
         h2 {
           font-size: $font-size4;
           padding: 0;
-          height: 55px;
+          height: 65px;
           margin: 0;
           @include align-center;
         }
@@ -39,7 +36,7 @@
 
         .duration {
           height: 20px;
-          margin: 10px 0 0 0;
+          margin: 10px 0 10px 0;
           color: $black-4;
           text-transform: uppercase;
           font-weight: 400;

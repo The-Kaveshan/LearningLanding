@@ -1,6 +1,9 @@
 @import "../../variables";
 
 .facts-stats {
+  .ant-col {
+    padding: 15px 0;
+  }
   .ant-statistic-title {
     font-size: $font-size4;
     font-weight: bold;

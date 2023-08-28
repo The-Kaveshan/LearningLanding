@@ -149,7 +149,7 @@ function NavBar() {
               );
             })}
           </Menu>
-          <Button style={{ borderRadius: 0}} className={'icon-animate'} icon={<LoginOutlined />}>Login</Button>
+          <Button className={'icon-animate'} icon={<LoginOutlined />}>Login</Button>
         </>
       )}
     </div>
