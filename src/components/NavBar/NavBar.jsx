@@ -9,35 +9,35 @@ const defaultMenu = [
   {
     key: "1",
     title: "Courses",
-    route: "/#",
+    route: "/LearningLanding",
     items: [
-      { key: "1-1", title: "View Immersive Learning", route: "/#", subMenu: true },
+      { key: "1-1", title: "View Immersive Learning", route: "/LearningLanding", subMenu: true },
       {
         key: "1-1-1",
         title: "Full Stack Web & Software Engineer Bootcamp",
-        route: "/#",
+        route: "/LearningLanding",
       },
-      { key: "1-2", title: "View On-Site Bootcamps", route: "/#", subMenu: true },
-      { key: "1-2-1", title: "Software Engineer", route: "/#" },
-      { key: "1-3", title: "View Online Bootcamps", route: "/#", subMenu: true },
-      { key: "1-3-1", title: "Web Developer", route: "/#" },
-      { key: "1-3-2", title: "Software Engineer", route: "/#" },
-      { key: "1-3-3", title: "Data Science", route: "/#" },
+      { key: "1-2", title: "View On-Site Bootcamps", route: "/LearningLanding", subMenu: true },
+      { key: "1-2-1", title: "Software Engineer", route: "/LearningLanding" },
+      { key: "1-3", title: "View Online Bootcamps", route: "/LearningLanding", subMenu: true },
+      { key: "1-3-1", title: "Web Developer", route: "/LearningLanding" },
+      { key: "1-3-2", title: "Software Engineer", route: "/LearningLanding" },
+      { key: "1-3-3", title: "Data Science", route: "/LearningLanding" },
       {
         key: "1-4",
         title: "Stellenbosch University in Partnership with HyperionDev",
-        route: "/#",
+        route: "/LearningLanding",
         subMenu: true
       },
-      { key: "1-4-1", title: "Web Developer", route: "/#" },
-      { key: "1-4-2", title: "Software Engineer", route: "/#" },
-      { key: "1-4-3", title: "Data Science", route: "/#" },
+      { key: "1-4-1", title: "Web Developer", route: "/LearningLanding" },
+      { key: "1-4-2", title: "Software Engineer", route: "/LearningLanding" },
+      { key: "1-4-3", title: "Data Science", route: "/LearningLanding" },
     ],
   },
-  { key: "2", title: "Pricing", route: "/#" },
-  { key: "3", title: "Our Method", route: "/#" },
-  { key: "4", title: "For Employers", route: "/#" },
-  { key: "5", title: "Contact Us", route: "/#" },
+  { key: "2", title: "Pricing", route: "/LearningLanding" },
+  { key: "3", title: "Our Method", route: "/LearningLanding" },
+  { key: "4", title: "For Employers", route: "/LearningLanding" },
+  { key: "5", title: "Contact Us", route: "/LearningLanding" },
 ];
 
 function NavBar() {
@@ -132,7 +132,7 @@ function NavBar() {
               })}
               <Menu.Item key={"login"} className={'icon-animate'} >
                 <LoginOutlined style={{marginRight: '5px'}}/>
-                <a href="/#">Login</a>
+                <a href="/LearningLanding">Login</a>
               </Menu.Item>
             </Menu>
           </Drawer>
