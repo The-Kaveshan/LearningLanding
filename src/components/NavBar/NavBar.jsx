@@ -43,7 +43,7 @@ const defaultMenu = [
 function NavBar() {
  
   const { SubMenu } = Menu;
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 880);
   const [visible, setVisible] = useState(false);
 
   const [localMenu, setlocalMenu] = useState([]);
@@ -66,17 +66,14 @@ function NavBar() {
   const onClose = () => {
     setVisible(false);
   };
-
+  
   useEffect(() => {
     const handleResize = () => {
-      // Set isMobile to true if window width is <= 768px
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 880);
     };
 
-    // Attach the event listener
     window.addEventListener("resize", handleResize);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };

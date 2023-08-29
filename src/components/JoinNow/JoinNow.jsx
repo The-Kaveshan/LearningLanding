@@ -42,7 +42,7 @@ const JoinNow = ({ className }) => {
   return (
     <div className={className}>
       <Row justify="center" align="middle">
-        <Col xs={24} md={18} className="text-container">
+        <Col xs={24} md={24} lg={18} className="text-container">
           <h1>
             Join more than 100,000 students who have registered to learn to code
             at HyperionDev.
@@ -67,7 +67,7 @@ const JoinNow = ({ className }) => {
             />
           </div>
         </Col>
-        <Col xs={24} md={6} className="actions-container">
+        <Col xs={24} md={24} lg={6} className="actions-container">
           {awardsData.map((award, index) => (
             <Row className={"awards-row"} key={index}>
               <Col
