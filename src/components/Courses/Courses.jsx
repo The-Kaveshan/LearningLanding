@@ -89,7 +89,7 @@ function Courses({ className }) {
         {localCourses.map((course, index) => (
           <Col
             xs={24}
-            sm={12}
+            sm={24}
             md={12}
             lg={12}
             xl={6}
