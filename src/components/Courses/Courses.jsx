@@ -75,7 +75,7 @@ function Courses({ className }) {
       />
       <Row role="list">
         {courses.map((course, index) => (
-          <Col xs={24} sm={12} md={8} lg={6} key={index} role="listitem">
+          <Col xs={24} sm={12} md={12} lg={12} xl={6} key={index} role="listitem">
             <Badge.Ribbon
               text={course.category}
               color={
