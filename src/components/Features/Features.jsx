@@ -32,10 +32,10 @@ const Features = ({ className }) => {
     <section className={className}>
       <Header
         title={"What Makes Us Unique"}
-        subtitle={"Go From Novice to Industry-Ready"}
+        subtitle={"Go From Novice to Industry-ready"}
       />
       <Row gutter={[16, 16]} align="middle">
-        <Col xs={24} md={12} className="timeline-column">
+        <Col xs={24} md={24} lg={12} className="timeline-column">
           <Timeline mode="left" aria-label="Features Timeline">
             {localFeatures.map((item, index) => (
               <Timeline.Item
@@ -47,7 +47,7 @@ const Features = ({ className }) => {
             ))}
           </Timeline>
         </Col>
-        <Col xs={24} md={12}>
+        <Col xs={24} md={24} lg={12}>
           <Image
             width="100%"
             src={Map}

@@ -17,7 +17,7 @@ function RegisterBanner() {
       <Row>
         <Col xs={24} md={24} lg={24} xl={24}>
           <Text className="text" role="heading" aria-level="2">
-            Participate in Our Upcoming Informational Webinar Session!
+            Participate in Our Upcoming Informative Webinar Session!
           </Text>
           <Button
             size="large"
