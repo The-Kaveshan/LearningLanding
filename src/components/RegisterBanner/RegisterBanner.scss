@@ -9,20 +9,27 @@
   color: $white-0;
   padding: 0;
   @include box-shadow;
+  @include align-center;
   animation: slideDown 0.5s ease-out;
   z-index: 999;
   width: 100%;
 
-  .text {
-    color: $white-0;
-    font-size: $font-size2;
+  .ant-col {
+    @include align-center;
+    
+    margin: 15px 0;
+    .text {
+      color: $white-0;
+      font-size: $font-size2;
+    }
+    .register-button {
+      background: "transparent";
+      border: 1.5px solid #ffffff !important;
+      color: "#FFFFFF";
+      margin-left: 20px;
+    }
   }
-}
-
-.register-button {
-  background: "transparent";
-  border: 1.5px solid #ffffff !important;
-  color: "#FFFFFF";
+  
 }
 
 @keyframes slideDown {
@@ -40,21 +47,16 @@
   .animated-banner {
     padding: 0;
 
-    button {
-      font-size: $font-size5;
-    }
+    .ant-col {
+      flex-direction: column;
+      .text {
+        font-size: $font-size5;
+      }
 
-    span {
-      font-size: $font-size5;
+      button {
+        margin-top: 10px;
+        margin-left: 0;
+      }
     }
-
-    .text {
-      font-size: $font-size4;
-    }
-  }
-
-  .animated-banner .ant-row > .ant-col {
-    @include align-center;
-    flex-direction: column;
   }
 }
