@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Typography, Space, Row, Col } from "antd";
+import { Button, Typography, Row, Col } from "antd";
 import { CloseOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import "./RegisterBanner.scss";
 import colors from "../../_variables.scss";

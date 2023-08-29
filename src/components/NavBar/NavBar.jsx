@@ -5,44 +5,59 @@ import { MenuOutlined, CloseOutlined, LoginOutlined } from "@ant-design/icons";
 import "./NavBar.scss";
 import Logo from "../../assets/images/logo.svg";
 
+const defaultMenu = [
+  {
+    key: "1",
+    title: "Courses",
+    route: "/",
+    items: [
+      { key: "1-1", title: "View Immersive Learning", route: "/", subMenu: true },
+      {
+        key: "1-1-1",
+        title: "Full Stack Web & Software Engineer Bootcamp",
+        route: "/",
+      },
+      { key: "1-2", title: "View On-Site Bootcamps", route: "/", subMenu: true },
+      { key: "1-2-1", title: "Software Engineer", route: "/" },
+      { key: "1-3", title: "View Online Bootcamps", route: "/", subMenu: true },
+      { key: "1-3-1", title: "Web Developer", route: "/" },
+      { key: "1-3-2", title: "Software Engineer", route: "/" },
+      { key: "1-3-3", title: "Data Science", route: "/" },
+      {
+        key: "1-4",
+        title: "Stellenbosch University in Partnership with HyperionDev",
+        route: "/",
+        subMenu: true
+      },
+      { key: "1-4-1", title: "Web Developer", route: "/" },
+      { key: "1-4-2", title: "Software Engineer", route: "/" },
+      { key: "1-4-3", title: "Data Science", route: "/" },
+    ],
+  },
+  { key: "2", title: "Pricing", route: "/" },
+  { key: "3", title: "Our Method", route: "/" },
+  { key: "4", title: "For Employers", route: "/" },
+  { key: "5", title: "Contact Us", route: "/" },
+];
+
 function NavBar() {
-  const items = [
-    {
-      key: "1",
-      title: "Courses",
-      route: "/",
-      items: [
-        { key: "1-1", title: "View Immersive Learning", route: "/", subMenu: true },
-        {
-          key: "1-1-1",
-          title: "Full Stack Web & Software Engineer Bootcamp",
-          route: "/",
-        },
-        { key: "1-2", title: "View On-Site Bootcamps", route: "/", subMenu: true },
-        { key: "1-2-1", title: "Software Engineer", route: "/" },
-        { key: "1-3", title: "View Online Bootcamps", route: "/", subMenu: true },
-        { key: "1-3-1", title: "Web Developer", route: "/" },
-        { key: "1-3-2", title: "Software Engineer", route: "/" },
-        { key: "1-3-3", title: "Data Science", route: "/" },
-        {
-          key: "1-4",
-          title: "Stellenbosch University in Partnership with HyperionDev",
-          route: "/",
-          subMenu: true
-        },
-        { key: "1-4-1", title: "Web Developer", route: "/" },
-        { key: "1-4-2", title: "Software Engineer", route: "/" },
-        { key: "1-4-3", title: "Data Science", route: "/" },
-      ],
-    },
-    { key: "2", title: "Pricing", route: "/" },
-    { key: "3", title: "Our Method", route: "/" },
-    { key: "4", title: "For Employers", route: "/" },
-    { key: "5", title: "Contact Us", route: "/" },
-  ];
+ 
   const { SubMenu } = Menu;
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [visible, setVisible] = useState(false);
+
+  const [localMenu, setlocalMenu] = useState([]);
+
+  useEffect(() => {
+    const cachedMenu = localStorage.getItem("menu");
+
+    if (cachedMenu) {
+      setlocalMenu(JSON.parse(cachedMenu));
+    } else {
+      localStorage.setItem("menu", JSON.stringify(defaultMenu));
+      setlocalMenu(defaultMenu);
+    }
+  }, []);
 
   const showDrawer = () => {
     setVisible(true);
@@ -94,7 +109,7 @@ function NavBar() {
               onClick={(e) => e.domEvent.stopPropagation()}
               role="menu"
             >
-              {items.map((item) => {
+              {localMenu.map((item) => {
                 // For items with children, use a SubMenu
                 if (item.items) {
                   return (
@@ -130,7 +145,7 @@ function NavBar() {
       ) : (
         <>
           <Menu mode="horizontal" className="desktop-menu" role="menu">
-            {items.map((item) => {
+            {localMenu.map((item) => {
               if (item.items) {
                 return (
                   <SubMenu key={item.key} title={item.title}>

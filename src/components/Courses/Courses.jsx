@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card, Badge, Row, Col, Divider } from "antd";
 import Header from "../Header/Header";
 import "./Courses.scss";
 import colors from "../../_variables.scss";
 
-const courses = [
+const defaultCourses = [
   {
     title: "Certified Full Stack Web & Software Engineer bootcamp",
     description:
@@ -34,24 +34,21 @@ const courses = [
     category: "Online",
   },
   {
-    title:
-      "Stellenbosch University Web Development Bootcamp",
+    title: "Stellenbosch University Web Development Bootcamp",
     description:
       "Master frontend & backend web development to build database-driven web apps using the powerful MERN stack.",
     length: "6 months part-time &#x2022; 3 months full-time",
     category: "University",
   },
   {
-    title:
-      "Stellenbosch University Software Engineering Bootcamp",
+    title: "Stellenbosch University Software Engineering Bootcamp",
     description:
       "Go from newbie to software engineer in no time. Learn everything you need to create amazing computer programs and software.",
     length: "6 months part-time &#x2022; 3 months full-time",
     category: "University",
   },
   {
-    title:
-      "Stellenbosch University Data Science Bootcamp",
+    title: "Stellenbosch University Data Science Bootcamp",
     description:
       "Learn to use classic machine learning models and popular data science tools to work with data to empower business, research, and technology.",
     length: "6 months part-time &#x2022; 3 months full-time",
@@ -67,15 +64,38 @@ const courses = [
 ];
 
 function Courses({ className }) {
+  const [localCourses, setLocalCourses] = useState([]);
+
+  useEffect(() => {
+    const cachedCourses = localStorage.getItem("courses");
+
+    if (cachedCourses) {
+      setLocalCourses(JSON.parse(cachedCourses));
+    } else {
+      localStorage.setItem("courses", JSON.stringify(defaultCourses));
+      setLocalCourses(defaultCourses);
+    }
+  }, []);
+
   return (
-    <div className={className} >
+    <div className={className}>
       <Header
-        title={"Master the Stack, Fast-Track Your Career: Unleashing the Power of Tech Skills"}
+        title={
+          "Master the Stack, Fast-Track Your Career: Unleashing the Power of Tech Skills"
+        }
         subtitle={"Embark on Your Learning Journey"}
       />
       <Row role="list">
-        {courses.map((course, index) => (
-          <Col xs={24} sm={12} md={12} lg={12} xl={6} key={index} role="listitem">
+        {localCourses.map((course, index) => (
+          <Col
+            xs={24}
+            sm={12}
+            md={12}
+            lg={12}
+            xl={6}
+            key={index}
+            role="listitem"
+          >
             <Badge.Ribbon
               text={course.category}
               color={
@@ -88,7 +108,7 @@ function Courses({ className }) {
                   : colors.black
               }
             >
-              <Card 
+              <Card
                 bordered={false}
                 tabIndex={0}
                 aria-label={`Course Title: ${course.title}, Description: ${course.description}, Duration: ${course.length}`}
@@ -96,7 +116,10 @@ function Courses({ className }) {
                 <h2>{course.title}</h2>
                 <Divider />
                 <p className={"course-text"}>{course.description}</p>
-                <p className={"duration"} dangerouslySetInnerHTML={{ __html: course.length }}></p>
+                <p
+                  className={"duration"}
+                  dangerouslySetInnerHTML={{ __html: course.length }}
+                ></p>
               </Card>
             </Badge.Ribbon>
           </Col>
