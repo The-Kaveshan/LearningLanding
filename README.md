@@ -1,5 +1,5 @@
 # Getting Started
-Clone the Repo
+Clone the Repo or Download the Project
 
 Navigate to the project directory, you can run:
 ### `source ~/.nvm/nvm.sh`
